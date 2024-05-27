@@ -20,18 +20,18 @@ student_distribution = 'Exponential'
 
 # Variables útiles en la simulación
 acum_time = 0
-'''Tiempo que acumulado en que van atendiendo a los clientes'''
+'''Tiempo acumulado'''
 client_id = 0
 '''Identificador del cliente'''
 clients_waiting = [] 
 '''Clientes que quedan en espera'''
 sizes_queue = []
-'''Tamaños de la cola terminado de atender un cliente'''
+'''Tamaños de la cola al terminar de atender a un cliente'''
 
 
 def client_arrive():
     '''
-    Simula la llegada con media = `prom_time` de los clientes a la biblioteca
+    Simula la llegada con media = `ave_clients_distribution` de los clientes a la biblioteca
     '''
 
     global client_id
@@ -62,6 +62,8 @@ def client_atention():
     global student_distribution
     
     while acum_time < max_time or len(clients_waiting) > 0:
+
+        # Se requiere esta verificación para no salir del while
         if len(clients_waiting) == 0:
             continue
     
@@ -83,7 +85,7 @@ def client_atention():
 def getRandomTime(distribution, ave):
     if distribution == 'Poisson':
         return np.random.poisson(ave)
-    if distribution == 'Exponential':
+    elif distribution == 'Exponential':
         return random.expovariate(1/ave)
 
 
