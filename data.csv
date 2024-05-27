@@ -1,0 +1,5 @@
+Distribution In,AVE,Distribution Out,AVE,MAX Queue Size,MIN Queue Size,AVE Queue Size
+Poisson,8,Exponential,5,2,0,0.6363636363636364
+Poisson,8,Exponential,5,1,0,0.17391304347826086
+Poisson,3,Exponential,3,2,0,0.8461538461538461
+Poisson,3,Exponential,3,3,0,1.4444444444444444
