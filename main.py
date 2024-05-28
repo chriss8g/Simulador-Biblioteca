@@ -41,12 +41,30 @@ class LibrarySimulation:
             with self.lock:
                 self.client_id += 1
                 arrival_time = time.time() - self.start_time
-                self.clients_waiting.append((self.client_id, arrival_time))
+                complexity = self.assign_complexity()
+                self.clients_waiting.append((self.client_id, arrival_time, complexity))
 
                 self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
-                print(f'Llegó el cliente {self.client_id}.')
 
         self.simulation_running = False
+
+    def assign_complexity(self):
+        '''
+        Assigns a complexity level to a client.
+        '''
+        complexities = ['rápido', 'medio', 'lento']
+        return random.choice(complexities)
+
+    def get_attention_time_based_on_complexity(self, complexity):
+        '''
+        Returns attention time based on the complexity level.
+        '''
+        if complexity == 'rápido':
+            return random.uniform(1, 2)  # Consultas rápidas
+        elif complexity == 'medio':
+            return random.uniform(3, 5)  # Consultas de complejidad media
+        elif complexity == 'lento':
+            return random.uniform(6, 10)  # Consultas lentas
 
     def client_attention(self, librarian_id):
         '''
@@ -56,22 +74,21 @@ class LibrarySimulation:
             if len(self.clients_waiting) == 0:
                 continue
 
-            attention_time = self.get_random_time(self.student_distribution, self.ave_student_distribution)
-
             with self.lock:
                 if len(self.clients_waiting) != 0:
-                    client_id, arrival_time = self.clients_waiting.pop(0)
+                    client_id, arrival_time, complexity = self.clients_waiting.pop(0)
                     wait_time = time.time() - self.start_time - arrival_time
                     self.wait_times.append(wait_time)
                     self.total_clients_attended += 1
-                    print(f'Cliente {client_id} siendo atendido por bibliotecario {librarian_id}')
+                    print(f'Cliente {client_id} tipo {complexity} atendido por {librarian_id}')
                     self.sizes_queue.append(len(self.clients_waiting))
 
+            attention_time = self.get_attention_time_based_on_complexity(complexity)
             time.sleep(attention_time)
             self.attention_times.append(attention_time)
 
             self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
-
+            
     def get_random_time(self, distribution, ave):
         if distribution == 'Poisson':
             return np.random.poisson(ave)
