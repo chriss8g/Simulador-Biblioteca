@@ -119,29 +119,27 @@ class LibrarySimulation:
     def run_simulation(self):
         arrive_thread = threading.Thread(target=self.client_arrive)
         attention_thread = threading.Thread(target=self.client_attention, args=(1,))
-        # attention2_thread = threading.Thread(target=self.client_attention, args=(2,))
-        # attention3_thread = threading.Thread(target=self.client_attention, args=(3,))
+        attention2_thread = threading.Thread(target=self.client_attention, args=(2,))
+        attention3_thread = threading.Thread(target=self.client_attention, args=(3,))
 
         arrive_thread.start()
         attention_thread.start()
-        # attention2_thread.start()
-        # attention3_thread.start()
+        attention2_thread.start()
+        attention3_thread.start()
 
         arrive_thread.join()
         attention_thread.join()
-        # attention2_thread.join()
-        # attention3_thread.join()
+        attention2_thread.join()
+        attention3_thread.join()
 
         if self.sizes_queue:
             max_size_queue = max(self.sizes_queue)
-            min_size_queue = min(self.sizes_queue)
             ave_size_queue = sum(self.sizes_queue) / len(self.sizes_queue)
         else:
-            max_size_queue = min_size_queue = ave_size_queue = 0
+            max_size_queue = ave_size_queue = 0
 
         os.system('clear')
         print(f'\n\n📌El tamaño máximo que tuvo la cola fue: {max_size_queue}')
-        print(f'📌El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
         print(f'📌El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
 
         total_wait_time = sum(self.wait_times)
@@ -155,7 +153,7 @@ class LibrarySimulation:
 
         data = [
             self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
-            self.ave_student_distribution, max_size_queue, min_size_queue, ave_size_queue,
+            self.ave_student_distribution, max_size_queue, ave_size_queue,
             ave_wait_time, ave_attention_time, self.total_clients_attended
         ]
 
