@@ -1,7 +1,7 @@
 import tkinter as tk
 
 class MovingSquare:
-    def __init__(self, canvas, start_x, start_y, end_x, color, size=50):
+    def __init__(self, canvas, start_x, start_y, end_x, color, moving_squares, size=50):
         self.canvas = canvas
         self.size = size
         self.x = start_x
@@ -10,13 +10,14 @@ class MovingSquare:
         self.color = color
         self.square = canvas.create_rectangle(self.x, self.y, self.x + size, self.y + size, fill=color)
         self.moving = True
+        self.moving_squares = moving_squares
         self.move_square()
 
     def move_square(self):
         if self.moving:
             # Check if there's any square to the right blocking the path
             can_move = True
-            for square in moving_squares:
+            for square in self.moving_squares:
                 if square != self and square.x < self.x + self.size + 5 < square.x + square.size and self.y == square.y:
                     can_move = False
                     break
@@ -32,41 +33,42 @@ class MovingSquare:
     def remove_square(self):
         self.moving = False
         self.canvas.delete(self.square)
-        moving_squares.remove(self)
+        self.moving_squares.remove(self)
 
-def add_red_square():
-    new_square = MovingSquare(canvas, 0, red_square_y, blue_square_x, "red")
-    moving_squares.append(new_square)
 
-# Crear la ventana principal
-root = tk.Tk()
-root.title("Simulación de Biblioteca")
-root.geometry("800x600")  # Tamaño de la ventana
+class ui:
+    def __init__(self):
 
-# Crear un lienzo para dibujar
-canvas = tk.Canvas(root, width=800, height=500)
-canvas.pack()
+        # Crear la ventana principal
+        self.root = tk.Tk()
+        self.root.title("Simulación de Biblioteca")
+        self.root.geometry("800x600")  # Tamaño de la ventana
 
-# Parámetros del cuadrado azul
-canvas_width = 800
-canvas_height = 600
-blue_square_size = 50  # Tamaño del cuadrado azul
-blue_square_x = canvas_width - blue_square_size  # Posición X del cuadrado azul en el borde derecho
-blue_square_y = (canvas_height / 3) - (blue_square_size / 2)  # Posición Y del cuadrado azul en el centro
+        # Crear un lienzo para dibujar
+        self.canvas = tk.Canvas(self.root, width=800, height=500)
+        self.canvas.pack()
 
-# Crear el cuadrado azul
-canvas.create_rectangle(blue_square_x, blue_square_y, blue_square_x + blue_square_size, blue_square_y + blue_square_size, fill="blue")
+        # Parámetros del cuadrado azul
+        canvas_width = 800
+        canvas_height = 600
+        blue_square_size = 50  # Tamaño del cuadrado azul
+        self.blue_square_x = canvas_width - blue_square_size  # Posición X del cuadrado azul en el borde derecho
+        blue_square_y = (canvas_height / 3) - (blue_square_size / 2)  # Posición Y del cuadrado azul en el centro
 
-# Parámetros del cuadrado rojo
-red_square_size = 50  # Tamaño del cuadrado rojo
-red_square_y = (canvas_height / 3) - (red_square_size / 2)  # Posición Y del cuadrado rojo en el centro
+        # Crear el cuadrado azul
+        self.canvas.create_rectangle(self.blue_square_x, blue_square_y, self.blue_square_x + blue_square_size, blue_square_y + blue_square_size, fill="blue")
 
-# Lista para almacenar los cuadrados rojos en movimiento
-moving_squares = []
+        # Parámetros del cuadrado rojo
+        red_square_size = 50  # Tamaño del cuadrado rojo
+        self.red_square_y = (canvas_height / 3) - (red_square_size / 2)  # Posición Y del cuadrado rojo en el centro
 
-# Botón para agregar cuadrados rojos
-add_button = tk.Button(root, text="Agregar Cuadro Rojo", command=add_red_square)
-add_button.pack()
+        # Lista para almacenar los cuadrados rojos en movimiento
+        self.moving_squares = []
 
-# Ejecutar la aplicación
-root.mainloop()
+    def main(self):
+        # Ejecutar la aplicación
+        self.root.mainloop()
+
+    def add_red_square(self):
+        new_square = MovingSquare(self.canvas, 0, self.red_square_y, self.blue_square_x, "red", self.moving_squares)
+        self.moving_squares.append(new_square)

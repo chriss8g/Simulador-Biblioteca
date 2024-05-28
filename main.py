@@ -3,6 +3,7 @@ import time
 import random
 import numpy as np
 import csv
+from ui import ui
 
 # Variables a modificar en la simulación
 
@@ -29,7 +30,7 @@ sizes_queue = []
 '''Tamaños de la cola al terminar de atender a un cliente'''
 
 
-def client_arrive():
+def client_arrive(interface):
     '''
     Simula la llegada con media = `ave_clients_distribution` de los clientes a la biblioteca
     '''
@@ -49,6 +50,7 @@ def client_arrive():
 
         # Imprime "Llegó" después de un tiempo aleatorio que sigue la distribución exponencial
         print(f'Llegó el ciente {client_id}. Cola: {clients_waiting}')
+        interface.add_red_square()
         
 def client_atention():
     '''
@@ -90,7 +92,13 @@ def getRandomTime(distribution, ave):
 
 
 if __name__ == '__main__':
-    hilo_tarea_1 = threading.Thread(target=client_arrive)
+    interface = ui()
+
+    hilo_tarea_0 = threading.Thread(target=interface.main)
+    hilo_tarea_0.start()
+
+
+    hilo_tarea_1 = threading.Thread(target=client_arrive, args=(interface, ))
     hilo_tarea_2 = threading.Thread(target=client_atention)
 
     hilo_tarea_1.start()
