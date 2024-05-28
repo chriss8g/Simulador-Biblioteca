@@ -3,130 +3,110 @@ import time
 import random
 import numpy as np
 import csv
-from ui import ui
-
-# Variables a modificar en la simulación
-
-max_time = 30
-'''Tiempo que debe durar la simulación'''
-ave_clients_distribution = 3
-'''Tiempo promedio en que los clientes llegan'''
-ave_student_distribution = 3
-'''Tiempo promedio en que el bibliotecario atiende a los clientes'''
-clients_distribution = 'Poisson'
-'''Distribución con la que llegan los clientes a la biblioteca'''
-student_distribution = 'Exponential'
-'''Distribución con la que los clientes son atendidos'''
+from ui import QueueRepresentation
+import os
 
 
-# Variables útiles en la simulación
-acum_time = 0
-'''Tiempo acumulado'''
-client_id = 0
-'''Identificador del cliente'''
-clients_waiting = [] 
-'''Clientes que quedan en espera'''
-sizes_queue = []
-'''Tamaños de la cola al terminar de atender a un cliente'''
+class LibrarySimulation:
+    def __init__(self, max_time=30, ave_clients_distribution=2, ave_student_distribution=3,
+                 clients_distribution='Poisson', student_distribution='Exponential'):
+        self.max_time = max_time
+        self.ave_clients_distribution = ave_clients_distribution
+        self.ave_student_distribution = ave_student_distribution
+        self.clients_distribution = clients_distribution
+        self.student_distribution = student_distribution
 
+        self.start_time = time.time()
+        self.clients_waiting = []
+        self.sizes_queue = []
+        self.client_id = 0
 
-def client_arrive(interface):
-    '''
-    Simula la llegada con media = `ave_clients_distribution` de los clientes a la biblioteca
-    '''
+        self.simulation_running = True
+        self.lock = threading.Lock()
 
-    global client_id
-    global clients_waiting
-    global ave_clients_distribution
-    global clients_distribution
+        self.interface = QueueRepresentation()
 
-    while acum_time < max_time:
-        # Genera un número aleatorio que sigue una distribución y con la media especificada
-        arrive_time = getRandomTime(clients_distribution, ave_clients_distribution)
-        time.sleep(arrive_time)
-        
-        client_id += 1
-        clients_waiting.append(client_id)
+    def client_arrive(self):
+        '''
+        Simulates client arrival with an average time specified by `ave_clients_distribution`.
+        '''
+        while time.time() - self.start_time < self.max_time:
+            arrive_time = self.get_random_time(
+                self.clients_distribution, self.ave_clients_distribution)
+            time.sleep(arrive_time)
 
-        # Imprime "Llegó" después de un tiempo aleatorio que sigue la distribución exponencial
-        print(f'Llegó el ciente {client_id}. Cola: {clients_waiting}')
-        interface.add_red_square()
-        
-def client_atention():
-    '''
-    Simula la atención de los clientes de uno en uno por parte de un bibliotecario
-    '''
+            with self.lock:
+                self.client_id += 1
+                self.clients_waiting.append(self.client_id)
 
-    global clients_waiting
-    global ave_student_distribution
-    global acum_time
-    global sizes_queue
-    global student_distribution
-    
-    while acum_time < max_time or len(clients_waiting) > 0:
+                self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
+                print(f'Llegó el cliente {self.client_id}.')
+                
 
-        # Se requiere esta verificación para no salir del while
-        if len(clients_waiting) == 0:
-            continue
-    
-        # Genera un número aleatorio que sigue una distribución exponencial con la media especificada
-        atention_time = getRandomTime(student_distribution, ave_student_distribution)
-        # Actualiza el tiempo acumulado y el cliente que está llegando
-        acum_time += atention_time
+        self.simulation_running = False
 
-        print(f'El ciente {clients_waiting[0]} está siendo atendido')
-        time.sleep(atention_time)
-        print(f'El ciente {clients_waiting[0]} fue atendido')
+    def client_attention(self):
+        '''
+        Simulates client attention one by one by a librarian.
+        '''
+        while time.time() - self.start_time < self.max_time:# or len(self.clients_waiting) != 0:
+            if len(self.clients_waiting) == 0:
+                continue
 
-        # Extraer el cliente atendido de la cola
-        clients_waiting.pop(0)
+            atention_time = self.get_random_time(
+                self.student_distribution, self.ave_student_distribution)
 
-        # Añadir el tamaño actual de la cola al array de los tamaños
-        sizes_queue.append(len(clients_waiting))
-        
-def getRandomTime(distribution, ave):
-    if distribution == 'Poisson':
-        return np.random.poisson(ave)
-    elif distribution == 'Exponential':
-        return random.expovariate(1/ave)
+            with self.lock:
+                if len(self.clients_waiting) != 0:
+                    client = self.clients_waiting.pop(0)
+                    # print(f'El cliente {client} está siendo atendido')
+                self.sizes_queue.append(len(self.clients_waiting))
+
+            time.sleep(atention_time)
+
+            self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
+            print(f'El cliente {client} fue atendido')
+
+    def get_random_time(self, distribution, ave):
+        if distribution == 'Poisson':
+            return np.random.poisson(ave)
+        elif distribution == 'Exponential':
+            return random.expovariate(1/ave)
+        else:
+            raise ValueError("Distribution not supported")
+
+    def run_simulation(self):
+        arrive_thread = threading.Thread(target=self.client_arrive)
+        attention_thread = threading.Thread(target=self.client_attention)
+
+        arrive_thread.start()
+        attention_thread.start()
+
+        arrive_thread.join()
+        attention_thread.join()
+
+        if self.sizes_queue:
+            max_size_queue = max(self.sizes_queue)
+            min_size_queue = min(self.sizes_queue)
+            ave_size_queue = sum(self.sizes_queue) / len(self.sizes_queue)
+        else:
+            max_size_queue = min_size_queue = ave_size_queue = 0
+
+        os.system('clear')
+        print(f'\n\nEl tamaño máximo que tuvo la cola fue: {max_size_queue}')
+        print(f'El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
+        print(f'El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
+
+        data = [self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
+                self.ave_student_distribution, max_size_queue, min_size_queue, ave_size_queue]
+
+        with open('data.csv', mode='a', newline='') as archivo_csv:
+            writer = csv.writer(archivo_csv)
+            writer.writerow(data)
+
+        print("Fila agregada exitosamente.")
 
 
 if __name__ == '__main__':
-    interface = ui()
-
-    hilo_tarea_0 = threading.Thread(target=interface.main)
-    hilo_tarea_0.start()
-
-
-    hilo_tarea_1 = threading.Thread(target=client_arrive, args=(interface, ))
-    hilo_tarea_2 = threading.Thread(target=client_atention)
-
-    hilo_tarea_1.start()
-    hilo_tarea_2.start()
-
-    hilo_tarea_1.join()
-    print(f'El tiempo de llegada de clientes terminó con {len(clients_waiting)} clientes en la cola')
-    hilo_tarea_2.join()
-
-    # Datos para analizar
-    max_size_queue = max(sizes_queue)
-    min_size_queue = min(sizes_queue)
-    ave_size_queue = sum(sizes_queue)/len(sizes_queue)
-
-    print(f'\n\nEl tamaño máximo que tuvo la cola fue: {max_size_queue}')
-    print(f'El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
-    print(f'El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
-
-    data = [clients_distribution, ave_clients_distribution, student_distribution, ave_student_distribution, max_size_queue, min_size_queue, ave_size_queue]
-
-    # Modo de apertura del archivo: 'w' para escritura, 'a' para anexar
-    modo_apertura = 'a'
-
-    # Abre el archivo CSV en el modo especificado
-    with open('data.csv', mode=modo_apertura, newline='') as archivo_csv:
-        writer = csv.writer(archivo_csv)
-        
-        # Agrega una nueva fila al final del archivo CSV
-        writer.writerow(data)
-
-    print("Fila agregada exitosamente.")
+    simulation = LibrarySimulation()
+    simulation.run_simulation()
