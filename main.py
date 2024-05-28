@@ -61,7 +61,7 @@ class LibrarySimulation:
         Returns attention time based on the complexity level.
         '''
         if complexity == 'Rápido':
-            return self.get_random_time(self.student_distribution, 2)  # Consultas rápidas
+            return self.get_random_time(self.student_distribution, self.ave_student_distribution/2)  # Consultas rápidas
         elif complexity == 'Medio':
             return self.get_random_time(self.student_distribution, self.ave_student_distribution)  # Consultas de complejidad media
         elif complexity == 'Lento':
