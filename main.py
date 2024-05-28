@@ -41,11 +41,10 @@ class LibrarySimulation:
 
                 self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
                 print(f'Llegó el cliente {self.client_id}.')
-                
 
         self.simulation_running = False
 
-    def client_attention(self):
+    def client_attention(self, librarian_id):
         '''
         Simulates client attention one by one by a librarian.
         '''
@@ -59,13 +58,13 @@ class LibrarySimulation:
             with self.lock:
                 if len(self.clients_waiting) != 0:
                     client = self.clients_waiting.pop(0)
-                    # print(f'El cliente {client} está siendo atendido')
-                self.sizes_queue.append(len(self.clients_waiting))
+                    print(f'Cliente {client} siendo atendido por bibliotecario {librarian_id}')
+                    self.sizes_queue.append(len(self.clients_waiting))
 
             time.sleep(atention_time)
 
             self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
-            print(f'El cliente {client} fue atendido')
+
 
     def get_random_time(self, distribution, ave):
         if distribution == 'Poisson':
@@ -77,13 +76,19 @@ class LibrarySimulation:
 
     def run_simulation(self):
         arrive_thread = threading.Thread(target=self.client_arrive)
-        attention_thread = threading.Thread(target=self.client_attention)
+        attention_thread = threading.Thread(target=self.client_attention, args=(1,))
+        # attention2_thread = threading.Thread(target=self.client_attention, args=(2,))
+        # attention3_thread = threading.Thread(target=self.client_attention, args=(3,))
 
         arrive_thread.start()
         attention_thread.start()
+        # attention2_thread.start()
+        # attention3_thread.start()
 
         arrive_thread.join()
         attention_thread.join()
+        # attention2_thread.join()
+        # attention3_thread.join()
 
         if self.sizes_queue:
             max_size_queue = max(self.sizes_queue)
