@@ -20,6 +20,7 @@ class LibrarySimulation:
         self.clients_waiting = []
         self.sizes_queue = []
         self.client_id = 0
+        self.extra_info = ""
 
         self.simulation_running = True
         self.lock = threading.Lock()
@@ -44,7 +45,7 @@ class LibrarySimulation:
                 complexity = self.assign_complexity()
                 self.clients_waiting.append((self.client_id, arrival_time, complexity))
 
-                self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
+                self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time, self.extra_info)
 
         self.simulation_running = False
 
@@ -59,11 +60,11 @@ class LibrarySimulation:
         '''
         Returns attention time based on the complexity level.
         '''
-        if complexity == 'rápido':
+        if complexity == 'Rápido':
             return random.uniform(1, 2)  # Consultas rápidas
-        elif complexity == 'medio':
+        elif complexity == 'Medio':
             return random.uniform(3, 5)  # Consultas de complejidad media
-        elif complexity == 'lento':
+        elif complexity == 'Lento':
             return random.uniform(6, 10)  # Consultas lentas
 
     def client_attention(self, librarian_id):
@@ -80,14 +81,21 @@ class LibrarySimulation:
                     wait_time = time.time() - self.start_time - arrival_time
                     self.wait_times.append(wait_time)
                     self.total_clients_attended += 1
-                    print(f'Cliente {client_id} tipo {complexity} atendido por {librarian_id}')
+
+                    self.extra_info += '\n'
+                    self.extra_info += f'⏩ Cliente {client_id}\n'
+                    self.extra_info += f'⏩ Tipo {complexity}\n'
+                    self.extra_info += f'⏩ Atendido por {librarian_id}\n'
+
                     self.sizes_queue.append(len(self.clients_waiting))
 
             attention_time = self.get_attention_time_based_on_complexity(complexity)
             time.sleep(attention_time)
             self.attention_times.append(attention_time)
 
-            self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
+            self.extra_info = ""
+
+            self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time, self.extra_info)
             
     def get_random_time(self, distribution, ave):
         if distribution == 'Poisson':
@@ -131,18 +139,18 @@ class LibrarySimulation:
             max_size_queue = min_size_queue = ave_size_queue = 0
 
         os.system('clear')
-        print(f'\n\nEl tamaño máximo que tuvo la cola fue: {max_size_queue}')
-        print(f'El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
-        print(f'El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
+        print(f'\n\n📌El tamaño máximo que tuvo la cola fue: {max_size_queue}')
+        print(f'📌El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
+        print(f'📌El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
 
         total_wait_time = sum(self.wait_times)
         total_attention_time = sum(self.attention_times)
         ave_wait_time = total_wait_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
         ave_attention_time = total_attention_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
 
-        print(f'El tiempo de espera promedio fue: {ave_wait_time}')
-        print(f'El tiempo de atención promedio fue: {ave_attention_time}')
-        print(f'Número total de clientes atendidos: {self.total_clients_attended}')
+        print(f'📌El tiempo de espera promedio fue: {ave_wait_time}')
+        print(f'📌El tiempo de atención promedio fue: {ave_attention_time}')
+        print(f'📌Número total de clientes atendidos: {self.total_clients_attended}')
 
         data = [
             self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
@@ -154,15 +162,9 @@ class LibrarySimulation:
             writer = csv.writer(archivo_csv)
             writer.writerow(data)
 
-        print("Fila agregada exitosamente.")
+        print("✅Fila agregada exitosamente.")
 
 
 if __name__ == '__main__':
-    simulation = LibrarySimulation(max_time=30, 
-        ave_clients_distribution=2, 
-        ave_student_distribution=3,  
-        clients_distribution='Gamma', 
-        student_distribution='Uniform' 
-    )
-
+    simulation = LibrarySimulation()
     simulation.run_simulation()
