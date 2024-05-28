@@ -26,20 +26,24 @@ class LibrarySimulation:
 
         self.interface = QueueRepresentation()
 
+        self.wait_times = []
+        self.attention_times = []
+        self.total_clients_attended = 0
+
     def client_arrive(self):
         '''
         Simulates client arrival with an average time specified by `ave_clients_distribution`.
         '''
         while time.time() - self.start_time < self.max_time:
-            arrive_time = self.get_random_time(
-                self.clients_distribution, self.ave_clients_distribution)
+            arrive_time = self.get_random_time(self.clients_distribution, self.ave_clients_distribution)
             time.sleep(arrive_time)
 
             with self.lock:
                 self.client_id += 1
-                self.clients_waiting.append(self.client_id)
+                arrival_time = time.time() - self.start_time
+                self.clients_waiting.append((self.client_id, arrival_time))
 
-                self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
+                self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
                 print(f'Llegó el cliente {self.client_id}.')
 
         self.simulation_running = False
@@ -48,29 +52,31 @@ class LibrarySimulation:
         '''
         Simulates client attention one by one by a librarian.
         '''
-        while time.time() - self.start_time < self.max_time:# or len(self.clients_waiting) != 0:
+        while time.time() - self.start_time < self.max_time:
             if len(self.clients_waiting) == 0:
                 continue
 
-            atention_time = self.get_random_time(
-                self.student_distribution, self.ave_student_distribution)
+            attention_time = self.get_random_time(self.student_distribution, self.ave_student_distribution)
 
             with self.lock:
                 if len(self.clients_waiting) != 0:
-                    client = self.clients_waiting.pop(0)
-                    print(f'Cliente {client} siendo atendido por bibliotecario {librarian_id}')
+                    client_id, arrival_time = self.clients_waiting.pop(0)
+                    wait_time = time.time() - self.start_time - arrival_time
+                    self.wait_times.append(wait_time)
+                    self.total_clients_attended += 1
+                    print(f'Cliente {client_id} siendo atendido por bibliotecario {librarian_id}')
                     self.sizes_queue.append(len(self.clients_waiting))
 
-            time.sleep(atention_time)
+            time.sleep(attention_time)
+            self.attention_times.append(attention_time)
 
-            self.interface.print(self.clients_waiting, time.time() - self.start_time, self.max_time)
-
+            self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time)
 
     def get_random_time(self, distribution, ave):
         if distribution == 'Poisson':
             return np.random.poisson(ave)
         elif distribution == 'Exponential':
-            return random.expovariate(1/ave)
+            return random.expovariate(1 / ave)
         else:
             raise ValueError("Distribution not supported")
 
@@ -102,8 +108,20 @@ class LibrarySimulation:
         print(f'El tamaño mínimo que tuvo la cola fue: {min_size_queue}')
         print(f'El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
 
-        data = [self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
-                self.ave_student_distribution, max_size_queue, min_size_queue, ave_size_queue]
+        total_wait_time = sum(self.wait_times)
+        total_attention_time = sum(self.attention_times)
+        ave_wait_time = total_wait_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
+        ave_attention_time = total_attention_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
+
+        print(f'El tiempo de espera promedio fue: {ave_wait_time}')
+        print(f'El tiempo de atención promedio fue: {ave_attention_time}')
+        print(f'Número total de clientes atendidos: {self.total_clients_attended}')
+
+        data = [
+            self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
+            self.ave_student_distribution, max_size_queue, min_size_queue, ave_size_queue,
+            ave_wait_time, ave_attention_time, self.total_clients_attended
+        ]
 
         with open('data.csv', mode='a', newline='') as archivo_csv:
             writer = csv.writer(archivo_csv)
