@@ -77,6 +77,16 @@ class LibrarySimulation:
             return np.random.poisson(ave)
         elif distribution == 'Exponential':
             return random.expovariate(1 / ave)
+        elif distribution == 'Normal':
+            return max(0, np.random.normal(ave, ave / 3))  # Evitar tiempos negativos
+        elif distribution == 'Uniform':
+            return np.random.uniform(ave / 2, ave * 2)
+        elif distribution == 'Gamma':
+            shape = 2
+            scale = ave / shape
+            return np.random.gamma(shape, scale)
+        elif distribution == 'Triangular':
+            return np.random.triangular(ave / 2, ave, ave * 2)
         else:
             raise ValueError("Distribution not supported")
 
@@ -131,5 +141,11 @@ class LibrarySimulation:
 
 
 if __name__ == '__main__':
-    simulation = LibrarySimulation()
+    simulation = LibrarySimulation(max_time=30, 
+        ave_clients_distribution=2, 
+        ave_student_distribution=3,  
+        clients_distribution='Gamma', 
+        student_distribution='Uniform' 
+    )
+
     simulation.run_simulation()
