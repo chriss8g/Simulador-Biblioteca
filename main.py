@@ -9,12 +9,14 @@ import os
 
 class LibrarySimulation:
     def __init__(self, max_time=30, ave_clients_distribution=1, ave_student_distribution=3,
-                 clients_distribution='Poisson', student_distribution='Exponential'):
+                 clients_distribution='Poisson', student_distribution='Exponential', libraries_count=3):
         self.max_time = max_time
         self.ave_clients_distribution = ave_clients_distribution
         self.ave_student_distribution = ave_student_distribution
         self.clients_distribution = clients_distribution
         self.student_distribution = student_distribution
+        self.libraries_count = libraries_count
+        self.threads = []
 
         self.start_time = time.time()
         self.clients_waiting = []
@@ -118,19 +120,18 @@ class LibrarySimulation:
 
     def run_simulation(self):
         arrive_thread = threading.Thread(target=self.client_arrive)
-        attention_thread = threading.Thread(target=self.client_attention, args=(1,))
-        attention2_thread = threading.Thread(target=self.client_attention, args=(2,))
-        attention3_thread = threading.Thread(target=self.client_attention, args=(3,))
+
+        for i in range(self.libraries_count):
+            self.threads.append(threading.Thread(target=self.client_attention, args=(i,)))
 
         arrive_thread.start()
-        attention_thread.start()
-        attention2_thread.start()
-        attention3_thread.start()
+        for i in range(self.libraries_count):
+            self.threads[i].start()
 
         arrive_thread.join()
-        attention_thread.join()
-        attention2_thread.join()
-        attention3_thread.join()
+        
+        for i in range(self.libraries_count):
+            self.threads[i].join()
 
         if self.sizes_queue:
             max_size_queue = max(self.sizes_queue)
@@ -154,7 +155,7 @@ class LibrarySimulation:
         data = [
             self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
             self.ave_student_distribution, max_size_queue, ave_size_queue,
-            ave_wait_time, ave_attention_time, self.total_clients_attended
+            ave_wait_time, ave_attention_time, self.total_clients_attended, self.libraries_count
         ]
 
         with open('data.csv', mode='a', newline='') as archivo_csv:
@@ -165,5 +166,8 @@ class LibrarySimulation:
 
 
 if __name__ == '__main__':
-    simulation = LibrarySimulation()
-    simulation.run_simulation()
+
+    for i in range(100):
+        x = int(np.random.uniform(1, 10))
+        simulation = LibrarySimulation(libraries_count=x)
+        simulation.run_simulation()

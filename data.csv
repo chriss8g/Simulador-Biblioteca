@@ -1,6 +1,4 @@
-clients_dist, ave_clients_dist, student_dist, ave_student_dist, max_size_queue, ave_size_queue, ave_wait_time, ave_attention_time, total_clients_attended
-Poisson,1,Exponential,3,8,2.2580645161290325,1.9900853556971396,3.0458308095096887,31
-Poisson,1,Exponential,3,2,0.2692307692307692,0.21743482809800369,2.3935254364617737,26
-Poisson,1,Exponential,3,6,2.09375,2.5055611580610275,2.911224287826053,32
-Poisson,1,Exponential,3,12,4.0,3.696811079978943,2.441060794438506,12
-Poisson,1,Exponential,3,6,1.5277777777777777,1.2553478015793695,2.0253350688362115,36
+clients_dist, ave_clients_dist, student_dist, ave_student_dist, max_size_queue, ave_size_queue, ave_wait_time, ave_attention_time, total_clients_attended, libraries_count
+Poisson,1,Exponential,3,1,0.06666666666666667,0.0019812901814778646,3.1222864732758144,30,6
+Poisson,1,Exponential,3,2,0.1,0.003119317690531413,2.606743097714206,30,8
+Poisson,1,Exponential,3,0,0.0,0.002445363998413086,3.2900472198790824,20,4
