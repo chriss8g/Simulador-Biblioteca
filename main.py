@@ -183,5 +183,5 @@ if __name__ == '__main__':
 
     for i in range(100):
         x = random.choice(libraries_count_distribution)
-        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5), ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(2,4))
+        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5), ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(1,5))
         simulation.run_simulation()

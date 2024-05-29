@@ -1,0 +1,110 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{latexsym,amssymb,enumerate,amsmath,epsfig,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace,color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[english]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{array}
+\usepackage[toc,page]{appendix}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{block} = [rectangle, draw, text width=7.5em, text centered, rounded corners,node distance=4cm, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+
+\newtheorem{eg}{Example}[section]
+\newcommand{\ds}{\displaystyle}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
+\begin{document}
+	\title{Simulación de una cola en una biblioteca}
+	\author{
+		Amanda Cordero Lezcano, Facultad de Matemática y Computación, Universidad de La Habana\\
+		Christopher Guerra Herrero, Facultad de Matemática y Computación, Universidad de La Habana\\
+		Alfredo Nuño Oquendo, Facultad de Matemática y Computación, Universidad de La Habana\\
+		%\thanks{MATH 4336 - Introduction to Mathematics of Image Processing, %Instructor: {\textit{Prof. Shingyu LEUNG}}, Teaching Assistant: %{\textit{Mr. Ka Wah WONG}}}
+	}
+	\markboth{Homer Lee}{SSW Application}
+	
+	\twocolumn[
+	\begin{@twocolumnfalse}
+		\maketitle
+		\begin{abstract}
+			Este estudio analiza el rendimiento de una simulación de biblioteca en la que se evalúan diferentes políticas de atención, incluyendo la política SJF (Shortest Job First). El objetivo es entender cómo estas políticas impactan en varios indicadores de rendimiento, tales como el tamaño de la cola, el tiempo de espera, y el número de clientes atendidos.
+		\end{abstract}
+	\end{@twocolumnfalse}
+	]
+	
+	
+	\section{Introducción}
+	En este estudio, se analiza el rendimiento de una simulación de biblioteca en la que se evalúan diferentes políticas de atención, incluyendo la política SJF (Shortest Job First). El objetivo es entender cómo estas políticas impactan en varios indicadores de rendimiento, tales como el tamaño de la cola, el tiempo de espera, y el número de clientes atendidos.
+	
+	\section{Metodología}
+	
+	\subsection{Descripción de la Simulación}
+	La simulación modela el funcionamiento de una biblioteca en la que los clientes llegan y esperan ser atendidos. Se registran varias métricas clave durante la ejecución de la simulación, las cuales se analizan para evaluar el desempeño bajo diferentes condiciones.
+	
+	\subsection{Datos Recolectados}
+	Los datos recolectados incluyen:
+	\begin{itemize}
+		\item Distribución promedio de clientes y estudiantes (\texttt{ave\_clients\_dist}, \texttt{ave\_student\_dist})
+		\item Tamaño máximo y promedio de la cola (\texttt{max\_size\_queue}, \texttt{ave\_size\_queue})
+		\item Tiempo promedio de espera y atención (\texttt{ave\_wait\_time}, \texttt{ave\_attention\_time})
+		\item Total de clientes atendidos (\texttt{total\_clients\_attended})
+		\item Número de bibliotecas involucradas en la simulación (\texttt{libraries\_count})
+		\item Indicador de si se usó la política SJF (\texttt{sjf})
+	\end{itemize}
+	
+	\subsection{Métodos de Análisis Estadístico}
+	Se realizaron análisis descriptivos de los datos para entender la distribución de las diferentes métricas. Además, se compararon los resultados entre simulaciones que usaron la política SJF y las que no la usaron para evaluar el impacto de esta política en el rendimiento de la biblioteca.
+	
+	\section{Resultados}
+	
+	\subsection{Análisis Descriptivo de los Datos}
+	Los datos recolectados se resumen en la Tabla \ref{tab:descriptive_stats}:
+	
+	\begin{table*}[h!]
+		\centering
+		\begin{tabular}{lrrrr}
+			\hline
+			\textbf{Métrica} & \textbf{Media} & \textbf{Desviación Estándar} & \textbf{Mínimo} & \textbf{Máximo} \\
+			\hline
+			\texttt{ave\_clients\_dist} & 1.021 & 0.304 & 0.504 & 1.499 \\
+			\texttt{ave\_student\_dist} & 3.049 & 0.795 & 1.059 & 4.941 \\
+			\texttt{max\_size\_queue} & 10.624 & 11.753 & 0.000 & 58.000 \\
+			\texttt{ave\_size\_queue} & 4.900 & 6.511 & 0.000 & 35.714 \\
+			\texttt{ave\_wait\_time} & 3.412 & 4.079 & 0.002 & 17.869 \\
+			\texttt{ave\_attention\_time} & 3.128 & 1.195 & 1.171 & 11.430 \\
+			\texttt{total\_clients\_attended} & 21.294 & 10.290 & 3.000 & 60.000 \\
+			\texttt{libraries\_count} & 2.990 & 2.025 & 1.000 & 8.000 \\
+			\hline
+		\end{tabular}
+		\caption{Estadísticas descriptivas de las métricas clave de la simulación}
+		\label{tab:descriptive_stats}
+	\end{table*}
+	
+	Esta tabla muestra las estadísticas descriptivas de las métricas clave de la simulación. La media y la desviación estándar proporcionan una idea del comportamiento general, mientras que los valores mínimos y máximos indican la variabilidad en los resultados.
+	
+	\section{Discusión}
+	Los resultados muestran que el tamaño máximo y promedio de la cola varían significativamente entre las simulaciones. El tiempo promedio de espera también presenta una alta variabilidad, lo que sugiere que las condiciones específicas de cada simulación influyen en gran medida en el rendimiento. Comparar estos resultados entre simulaciones con y sin la política SJF puede proporcionar información valiosa sobre la efectividad de dicha política.
+	
+	\section{Conclusiones}
+	En resumen, este estudio proporciona una visión detallada del rendimiento de una biblioteca bajo diferentes políticas de atención. Los resultados indican que la política SJF puede tener un impacto significativo en la eficiencia operativa de la biblioteca, reduciendo potencialmente los tiempos de espera y mejorando la experiencia del cliente. Futuros investigaciones podrían explorar más a fondo las condiciones óptimas para implementar esta política y otras estrategias de gestión de colas.
+	
+\end{document}
