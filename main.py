@@ -9,13 +9,14 @@ import os
 
 class LibrarySimulation:
     def __init__(self, max_time=30, ave_clients_distribution=1, ave_student_distribution=3,
-                 clients_distribution='Poisson', student_distribution='Exponential', libraries_count=3):
+                 clients_distribution='Poisson', student_distribution='Exponential', libraries_count=3, sjf=False):
         self.max_time = max_time
         self.ave_clients_distribution = ave_clients_distribution
         self.ave_student_distribution = ave_student_distribution
         self.clients_distribution = clients_distribution
         self.student_distribution = student_distribution
         self.libraries_count = libraries_count
+        self.sjf = sjf
         self.threads = []
 
         self.start_time = time.time()
@@ -77,7 +78,18 @@ class LibrarySimulation:
             with self.lock:
                 if len(self.clients_waiting) == 0:
                     continue
-                client_id, arrival_time, complexity = self.clients_waiting.pop(0)
+
+                n = 0
+                if self.sjf:
+                    flag = False
+                    for number, i in enumerate(self.clients_waiting):
+                        if(i[2] == "Rápido"):
+                            n = number
+                            break
+                        if(i[2] == "Medio" and not flag):
+                            n = number
+                            flag = True
+                client_id, arrival_time, complexity = self.clients_waiting.pop(n)
             
                 wait_time = time.time() - self.start_time - arrival_time
                 self.wait_times.append(wait_time)
@@ -153,9 +165,9 @@ class LibrarySimulation:
         print(f'📌Número total de clientes atendidos: {self.total_clients_attended}')
 
         data = [
-            self.clients_distribution, self.ave_clients_distribution, self.student_distribution,
+            self.ave_clients_distribution,
             self.ave_student_distribution, max_size_queue, ave_size_queue,
-            ave_wait_time, ave_attention_time, self.total_clients_attended, self.libraries_count
+            ave_wait_time, ave_attention_time, self.total_clients_attended, self.libraries_count, self.sjf
         ]
 
         with open('data.csv', mode='a', newline='') as archivo_csv:
@@ -167,7 +179,9 @@ class LibrarySimulation:
 
 if __name__ == '__main__':
 
+    libraries_count_distribution = [6,7,8,5,5,4,4,4,3,3,3,3,2,2,2,2,2,1,1,1,1,1,1]
+
     for i in range(100):
-        x = int(np.random.uniform(1, 10))
-        simulation = LibrarySimulation(libraries_count=x)
+        x = random.choice(libraries_count_distribution)
+        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5), ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(2,4))
         simulation.run_simulation()

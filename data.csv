@@ -1,4 +1,2 @@
-clients_dist, ave_clients_dist, student_dist, ave_student_dist, max_size_queue, ave_size_queue, ave_wait_time, ave_attention_time, total_clients_attended, libraries_count
-Poisson,1,Exponential,3,1,0.06666666666666667,0.0019812901814778646,3.1222864732758144,30,6
-Poisson,1,Exponential,3,2,0.1,0.003119317690531413,2.606743097714206,30,8
-Poisson,1,Exponential,3,0,0.0,0.002445363998413086,3.2900472198790824,20,4
+ave_clients_dist, ave_student_dist, max_size_queue, ave_size_queue, ave_wait_time, ave_attention_time, total_clients_attended, libraries_count, sjf
+
