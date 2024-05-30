@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.4.26)  29 MAY 2024 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.4.26)  29 MAY 2024 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -939,44 +939,63 @@ Overfull \hbox (45.06895pt too wide) in paragraph at lines 52--52
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 67--68
+Underfull \hbox (badness 2376) in paragraph at lines 68--68
+[]\OT1/cmr/bx/n/12 Pasos segui-dos para la im-ple-
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10 Tama~no m^^Saximo y prome-dio de la cola
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 []\OT1/cmr/m/n/10 Tiempo prome-dio de es-pera y atenci^^Son
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 []\OT1/cmr/m/n/10 Total de clientes aten-di-dos
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
+Underfull \hbox (badness 2096) in paragraph at lines 133--133
+[]\OT1/cmr/bx/n/12 Comparaci^^Son de los re-sul-ta-dos
+ []
 
-] [2
-
-] (./main.aux)
+[2] [3] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 070CF10BD1E476CE4D1473962C40936F;1323.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 0FE3899835F6CC71551FEAC8EAD26CFD;4467
+(rerunfilecheck)             After:  BEE1B40E2A72BAC19EA5401E0B893206;5461.
  ) 
 Here is how much of TeX's memory you used:
- 26563 strings out of 476047
- 515063 string characters out of 5792075
- 1948975 words of memory out of 5000000
- 48099 multiletter control sequences out of 15000+600000
+ 26589 strings out of 476047
+ 515451 string characters out of 5792075
+ 1945975 words of memory out of 5000000
+ 48110 multiletter control sequences out of 15000+600000
  567678 words of font info for 77 fonts, out of 8000000 for 9000
  85 hyphenation exceptions out of 8191
- 99i,10n,117p,541b,463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,117p,541b,489s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/christopherwar/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcr
 m1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -986,10 +1005,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (2 pages, 115523 bytes).
+Output written on main.pdf (3 pages, 120939 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
