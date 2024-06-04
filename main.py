@@ -68,7 +68,7 @@ class LibrarySimulation:
         elif complexity == 'Medio':
             return self.get_random_time(self.student_distribution, self.ave_student_distribution)  # Consultas de complejidad media
         elif complexity == 'Lento':
-            return self.get_random_time(self.student_distribution, 4)  # Consultas lentas
+            return self.get_random_time(self.student_distribution, self.ave_student_distribution+3)  # Consultas lentas
 
     def client_attention(self, librarian_id):
         '''
