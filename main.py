@@ -4,6 +4,7 @@ import random
 import numpy as np
 import csv
 from ui import QueueRepresentation
+from complexities import Complexities
 import os
 
 
@@ -25,8 +26,8 @@ class LibrarySimulation:
         self.client_id = 0
         self.extra_info = ""
 
-        self.simulation_running = True
         self.lock = threading.Lock()
+        self.complexities = Complexities()
 
         self.interface = QueueRepresentation()
 
@@ -40,36 +41,16 @@ class LibrarySimulation:
         Simulates client arrival with an average time specified by `ave_clients_distribution`.
         '''
         while time.time() - self.start_time < self.max_time:
-            arrive_time = self.get_random_time(self.clients_distribution, self.ave_clients_distribution)
+            arrive_time = self.complexities.get_random_time(self.clients_distribution, self.ave_clients_distribution)
             time.sleep(arrive_time)
 
             with self.lock:
                 self.client_id += 1
                 arrival_time = time.time() - self.start_time
-                complexity = self.assign_complexity()
+                complexity = self.complexities.assign_complexity()
                 self.clients_waiting.append((self.client_id, arrival_time, complexity))
 
                 self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time, self.extra_info)
-
-        self.simulation_running = False
-
-    def assign_complexity(self):
-        '''
-        Assigns a complexity level to a client.
-        '''
-        complexities = ['Rápido', 'Medio', 'Lento']
-        return random.choice(complexities)
-
-    def get_attention_time_based_on_complexity(self, complexity):
-        '''
-        Returns attention time based on the complexity level.
-        '''
-        if complexity == 'Rápido':
-            return self.get_random_time(self.student_distribution, self.ave_student_distribution/2)  # Consultas rápidas
-        elif complexity == 'Medio':
-            return self.get_random_time(self.student_distribution, self.ave_student_distribution)  # Consultas de complejidad media
-        elif complexity == 'Lento':
-            return self.get_random_time(self.student_distribution, self.ave_student_distribution+3)  # Consultas lentas
 
     def client_attention(self, librarian_id):
         '''
@@ -94,23 +75,24 @@ class LibrarySimulation:
                             n = number
                             flag = True
                 client_id, arrival_time, complexity = self.clients_waiting.pop(n)
-            
+                
                 wait_time = time.time() - self.start_time - arrival_time
                 self.wait_times.append(wait_time)
-                self.total_clients_attended += 1
 
                 self.extra_info += '\n'
                 self.extra_info += f'⏩ Cliente {client_id}\n'
                 self.extra_info += f'⏩ Tipo {complexity}\n'
                 self.extra_info += f'⏩ Atendido por {librarian_id}\n'
 
-                self.sizes_queue.append(len(self.clients_waiting))
-
-                attention_time = self.get_attention_time_based_on_complexity(complexity)
+                attention_time = self.complexities.get_attention_time_based_on_complexity(complexity, self.student_distribution, self.ave_student_distribution)
                 self.attention_times.append(attention_time)
 
             time.sleep(attention_time)
             
+            with self.lock:   
+                self.sizes_queue.append(len(self.clients_waiting))
+                self.total_clients_attended += 1
+
 
             self.extra_info = ""
 
@@ -131,26 +113,6 @@ class LibrarySimulation:
             i+=1
 
         self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time, self.extra_info)
-
-
-
-    def get_random_time(self, distribution, ave):
-        if distribution == 'Poisson':
-            return np.random.poisson(ave)
-        elif distribution == 'Exponential':
-            return random.expovariate(1 / ave)
-        elif distribution == 'Normal':
-            return max(0, np.random.normal(ave, ave / 3))  # Evitar tiempos negativos
-        elif distribution == 'Uniform':
-            return np.random.uniform(ave / 2, ave * 2)
-        elif distribution == 'Gamma':
-            shape = 2
-            scale = ave / shape
-            return np.random.gamma(shape, scale)
-        elif distribution == 'Triangular':
-            return np.random.triangular(ave / 2, ave, ave * 2)
-        else:
-            raise ValueError("Distribution not supported")
 
     def run_simulation(self):
         arrive_thread = threading.Thread(target=self.client_arrive)
@@ -177,14 +139,15 @@ class LibrarySimulation:
         print(f'\n\n📌El tamaño máximo que tuvo la cola fue: {max_size_queue}')
         print(f'📌El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
 
-        total_wait_time = sum(self.wait_times)
+        total_wait_time = sum(self.wait_times) + 5 * self.total_client_lose
         total_attention_time = sum(self.attention_times)
-        ave_wait_time = total_wait_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
+        ave_wait_time = total_wait_time / (self.total_clients_attended + self.total_client_lose) if self.total_clients_attended > 0 else 0
         ave_attention_time = total_attention_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
 
         print(f'📌El tiempo de espera promedio fue: {ave_wait_time}')
         print(f'📌El tiempo de atención promedio fue: {ave_attention_time}')
         print(f'📌Número total de clientes atendidos: {self.total_clients_attended}')
+        print(f'📌Número total de clientes perdidos: {self.total_client_lose}')
 
         data = [
             round(self.ave_clients_distribution, 2),
@@ -208,9 +171,11 @@ class LibrarySimulation:
 
 if __name__ == '__main__':
 
-    libraries_count_distribution = [6,7,8,5,5,4,4,4,3,3,3,3,2,2,2,2,2,1,1,1,1,1,1]
+    
+    libraries_count_distribution = [i+1 for i in range(8)]
+    weights = [0.3, 0.2, 0.2, 0.1, 0.05, 0.05, 0.05, 0.05]
 
-    for i in range(100):
-        x = random.choice(libraries_count_distribution)
-        simulation = LibrarySimulation(libraries_count=1, sjf=0, ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(1,5))
+    for i in range(50):
+        x = random.choices(libraries_count_distribution, weights)[0]
+        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5), ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(1,5))
         simulation.run_simulation()
