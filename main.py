@@ -108,11 +108,11 @@ class LibrarySimulation:
                 self.clients_waiting.pop(i)
                 self.total_client_lose += 1
                 i -= 1
-                print(f'{client_id} is left ')
-            
-            i+=1
 
-        self.interface.print([client[0] for client in self.clients_waiting], time.time() - self.start_time, self.max_time, self.extra_info)
+                self.extra_info += f'\n'
+                self.extra_info += f'😠 El cliente {client_id} se ha ido \n'
+                            
+            i+=1
 
     def run_simulation(self):
         arrive_thread = threading.Thread(target=self.client_arrive)
@@ -137,21 +137,19 @@ class LibrarySimulation:
 
         os.system('clear')
         print(f'\n\n📌El tamaño máximo que tuvo la cola fue: {max_size_queue}')
-        print(f'📌El tamaño promedio que tuvo la cola fue: {ave_size_queue}')
+        print(f'📌El tamaño promedio que tuvo la cola fue: {round(ave_size_queue, 2)}')
 
         total_wait_time = sum(self.wait_times) + 5 * self.total_client_lose
         total_attention_time = sum(self.attention_times)
         ave_wait_time = total_wait_time / (self.total_clients_attended + self.total_client_lose) if self.total_clients_attended > 0 else 0
         ave_attention_time = total_attention_time / self.total_clients_attended if self.total_clients_attended > 0 else 0
 
-        print(f'📌El tiempo de espera promedio fue: {ave_wait_time}')
-        print(f'📌El tiempo de atención promedio fue: {ave_attention_time}')
+        print(f'📌El tiempo de espera promedio fue: {round(ave_wait_time, 2)}')
+        print(f'📌El tiempo de atención promedio fue: {round(ave_attention_time, 2)}')
         print(f'📌Número total de clientes atendidos: {self.total_clients_attended}')
         print(f'📌Número total de clientes perdidos: {self.total_client_lose}')
 
         data = [
-            round(self.ave_clients_distribution, 2),
-            round(self.ave_student_distribution, 2),
             max_size_queue,
             round(ave_size_queue,2),
             round(ave_wait_time, 2),
@@ -177,5 +175,5 @@ if __name__ == '__main__':
 
     for i in range(50):
         x = random.choices(libraries_count_distribution, weights)[0]
-        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5), ave_clients_distribution=np.random.uniform(0.5, 1.5), ave_student_distribution=np.random.uniform(1,5))
+        simulation = LibrarySimulation(libraries_count=x, sjf=(np.random.uniform(0,1)>0.5))
         simulation.run_simulation()
