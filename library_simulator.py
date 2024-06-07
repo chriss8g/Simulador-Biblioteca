@@ -3,11 +3,12 @@ import numpy as np
 import csv
 
 class LibrarySimulator:
-    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time):
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians):
         self.mean_arrival_rate = mean_arrival_rate
         self.mean_service_time = mean_service_time
         self.convergence_threshold = convergence_threshold
         self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
 
         # Initialize statistics
         self.wait_times = []
@@ -20,7 +21,7 @@ class LibrarySimulator:
         while True:
             yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
             if server.count == 0 and len(server.queue) == 0:
-                # If the server is idle and there is no queue, add idle time
+                # If all servers are idle and there is no queue, add idle time
                 idle_time = env.now - last_service_time[0]
                 self.idle_times.append(idle_time)
             env.process(self.customer_service(env, server, env.now, last_service_time))
@@ -45,8 +46,8 @@ class LibrarySimulator:
         self.total_customers_served = 0
 
         env = simpy.Environment()
-        server = simpy.Resource(env, capacity=1)  # Only one server at the desk
-        last_service_time = [0]  # Time when the server finished serving the last customer
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
 
         # Start the customer arrival generator
         env.process(self.customer_arrival(env, server, last_service_time))
@@ -73,11 +74,14 @@ class LibrarySimulator:
         ]
 
 def main():
+    num_librarians = 2  # Number of librarians
+
     simulator = LibrarySimulator(
         mean_arrival_rate=8,
         mean_service_time=5,
         convergence_threshold=0.01,
-        simulation_time=8 * 60  # in minutes, e.g., 8 hours
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians
     )
 
     all_customers_served = []
