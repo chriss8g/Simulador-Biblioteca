@@ -11,8 +11,7 @@ El archivo comprimido contiene los siguientes archivos:
 3. `result.md`
 4. `ui.py`
 
-¿Te gustaría que revisara alguno de estos archivos en particular o que te proporcionara un resumen de su contenido? 
-
+¿Te gustaría que revisara alguno de estos archivos en particular o que te proporcionara un resumen de su contenido?
 
 mi objetivo es hacer algunas estadisticas con un csv q tengo resultado de haber corrido varias veces esa simulacion. Necesito q m ayudes a redactar un paper tratando el tema
 
@@ -55,8 +54,7 @@ Para redactar el paper, podemos seguir la siguiente estructura:
    * Resumen de los principales hallazgos.
    * Recomendaciones para futuras investigaciones.
 
-Vamos a proceder con el análisis estadístico y luego redactaremos el contenido en formato Markdown. Comenzaremos con un análisis descriptivo de los datos. 
-
+Vamos a proceder con el análisis estadístico y luego redactaremos el contenido en formato Markdown. Comenzaremos con un análisis descriptivo de los datos.
 
 Descriptive Statistics of Simulation Data
 
@@ -107,8 +105,7 @@ En resumen, este estudio proporciona una visión detallada del rendimiento de un
 
 ---
 
-Para completar el análisis, podemos generar gráficos y realizar comparaciones más detalladas entre las políticas de atención. ¿Te gustaría proceder con esto o necesitas algún ajuste en la estructura del paper? 
-
+Para completar el análisis, podemos generar gráficos y realizar comparaciones más detalladas entre las políticas de atención. ¿Te gustaría proceder con esto o necesitas algún ajuste en la estructura del paper?
 
 m ayudaria q esten en estructura de latex estos textos
 
@@ -878,7 +875,7 @@ Dado que el análisis ANOVA no muestra diferencias significativas, puedes conclu
 
 Si tienes alguna pregunta adicional o necesitas más ayuda con otros análisis, por favor házmelo saber.
 
-                     sum\_sq     df          F        PR(>F) C(libraries\_count)  1783.177125    7.0  32.579106  2.034454e-29 Residual            1477.811651  189.0        NaN           NaN estos fueron los resultados al analizar el ave\_wait\_time
+                 sum\_sq     df          F        PR(>F) C(libraries\_count)  1783.177125    7.0  32.579106  2.034454e-29 Residual            1477.811651  189.0        NaN           NaN estos fueron los resultados al analizar el ave\_wait\_time
 ### Interpretación de los Resultados ANOVA para `ave_wait_time`
 
 Aquí están los resultados del ANOVA que has proporcionado para `ave_wait_time`:
@@ -1250,7 +1247,7 @@ Supongamos que obtienes los siguientes resultados:
 
 <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>markdown</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
 
-<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4 text-left undefined" dir="ltr"><code class="!whitespace-pre hljs language-markdown">                             Logit Regression Results                          
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4 text-left undefined" dir="ltr"><code class="!whitespace-pre hljs language-markdown">                             Logit Regression Results                        
 ==============================================================================
 Dep. Variable:                    sjf   No. Observations:                  200
 Model:                          Logit   Df Residuals:                      191
@@ -1622,3 +1619,3103 @@ print(vif_data)
 ### Conclusión
 
 Si alguno de los supuestos del modelo de regresión lineal no se cumple, puedes aplicar diversas estrategias para abordarlo, como transformaciones de variables, uso de modelos robustos, o métodos no paramétricos. Verificar nuevamente los supuestos después de aplicar estas soluciones te ayudará a asegurar que tu modelo es válido y fiable. Si necesitas más ayuda o tienes alguna pregunta específica, no dudes en decírmelo.
+
+
+
+
+---
+
+
+---
+
+---
+
+---
+
+---
+
+
+---
+
+
+
+## Historial del chat
+
+[](https://chatgpt.com/)
+
+[ChatGPT](https://chatgpt.com/)[![GPT](https://files.oaiusercontent.com/file-cfIRYczfPXRZ83wKH5FB32t5?se=2123-10-23T02%3A31%3A00Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dbc5bbf5a-0ee3-48a9-acd5-4e48eb18e0f4.png&sig=wQVWqkLu%2BESZw/XDBuDBl6sEruGVr0UzJnUajMStwNM%3D)Math Wiz Checker](https://chatgpt.com/g/g-XoKfDNPzm-math-wiz-checker)
+
+[![GPT](https://files.oaiusercontent.com/file-cdGbW41B1KJzlZmT0qrRftFk?se=2123-10-28T02%3A26%3A59Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dcdebd9a1-317c-4a84-937b-d6cdabf05fbb.png&sig=jQrhpx3cqZzR1h9XxGDTFQsU%2BuOeHi7gQRvu4wbzv%2BE%3D)Latino Colocado](https://chatgpt.com/g/g-FeAhHVesB-latino-colocado)
+
+[![GPT](https://files.oaiusercontent.com/file-9U70BpEb9LRUNd2W0HipJbG0?se=2123-10-30T01%3A39%3A31Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D2061bb00-3ddc-49c4-9c79-e529b9fbe5b9.webp&sig=%2BKKmLKAnkt7NgNqruYgHLY3wdMGDqTTh%2BZMM4e10KpA%3D)Real-Life DALL-E](https://chatgpt.com/g/g-1oi1KGgtv-real-life-dall-e)
+
+[![GPT](https://files.oaiusercontent.com/file-TTwL3J30mSzUJ1fcRllL0Juv?se=2123-10-23T02%3A09%3A48Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db146dc3a-7b97-4595-9b55-79e74ee3bc6b.png&sig=ppfXmD27G8EIjOzYQQLU1WAm5iDIv5O1HA5plWcHjsU%3D)Math Wiz](https://chatgpt.com/g/g-UnFsbXp8B-math-wiz)
+
+### Hoy
+
+1. [Sim Experto En Simulaciones](https://chatgpt.com/c/44be17f4-cd11-4db9-be1e-147d5f376ef9)
+2. [Instalar C++ en VSCode.](https://chatgpt.com/c/48496c87-bd14-48cb-9bfa-581f26892908)
+3. [Registro Usuario Consultoría Económica](https://chatgpt.com/c/cca91beb-a433-4785-a148-cf2eeb91e13f)
+4. [Calcular Estabilidad y Ecos](https://chatgpt.com/c/c2f46a12-cad8-4a04-aece-ce1d06bed53a)
+
+### Ayer
+
+1. [Correcciones en DFA y NDFA](https://chatgpt.com/c/a5ec05f9-7c42-41bc-a181-bcc62b681642)
+2. [Ábaco: Mínimo Movimientos C#](https://chatgpt.com/c/efc15929-9131-4b09-a53c-5dc3a7533753)
+3. [Recomendaciones de Nauta Hogar](https://chatgpt.com/c/5cfec5de-14c1-4651-8d10-aa7571b2d09d)
+4. [Añadir elemento a array 3D.](https://chatgpt.com/c/40140699-04e6-47ab-b44d-ecd2414de021)
+
+### 7 días anteriores
+
+1. [Documento PDF, aprendizaje, preguntas](https://chatgpt.com/c/c637cad6-e9e5-484c-ad84-f2a740a9ce95)
+2. [Mayor Área Paracaidista DFS](https://chatgpt.com/c/69838e40-2944-4da2-b8d2-2648e63444df)
+3. [Encontrar Ruta Archivo Mac.](https://chatgpt.com/c/edaa940a-e8e0-4455-ab45-6c4f8df305c0)
+4. [Comparación de Implementaciones de Funciones](https://chatgpt.com/c/4e92b685-b03a-496b-b6e1-7188b2df4e03)
+5. [Cyber Scam Busters Logo.](https://chatgpt.com/c/8d11c68c-d92e-4cd7-8632-df493b87a88c)
+6. [Scam Busters Logo Design](https://chatgpt.com/c/89f2f94b-cc54-4ead-ad7a-df3506fb85af)
+7. [Scam Busters Logo Design](https://chatgpt.com/c/3e5a88af-ab62-46b6-a15b-26b331bf9dc3)
+8. [Scam Busters Logo Design](https://chatgpt.com/g/g-2fkFE8rbu-dall-e/c/66efda74-720b-40ea-b100-0a93642c1bdb)
+9. [Scam Fighting Logo Design](https://chatgpt.com/c/33e1ccbd-e1fd-4d67-b661-9084dc0bda2c)
+10. [Magic Mushrooms Image](https://chatgpt.com/c/f3c8898e-6a5b-4811-9516-f827bec1f178)
+11. [Rice MMA Club Logo.](https://chatgpt.com/c/165eace5-8c4d-4fd8-bb28-481620632335)
+
+### 30 días anteriores
+
+1. [Multiple InputBase in FormControl](https://chatgpt.com/c/7af12791-ec8b-44ff-884f-9886b38f0fa1)
+2. [Configurar VS Code para C++](https://chatgpt.com/c/5be7c46b-47b0-4eed-9dcb-160a70f35658)
+3. [Set Default Value DatePicker](https://chatgpt.com/c/41e6de6d-f770-42b8-b6bc-675178dcda31)
+4. [Cambiar color en terminal.](https://chatgpt.com/c/4ba6df50-3087-483b-abde-f231e6446dfd)
+5. [Set sortModel DataGrid.](https://chatgpt.com/c/8749da38-7359-4bcc-98bc-5db6cb778a96)
+6. [Set SortModel DataGrid](https://chatgpt.com/c/eb215a1c-64a9-468f-afb8-afd77e57ccee)
+7. [Mui DataGrid Overview](https://chatgpt.com/c/60dd3367-b7a5-4f15-a4d9-7ef992b684aa)
+8. [Steve Jobs: Oratoria y Diseño.](https://chatgpt.com/c/23b8d1b0-745f-40bf-ac13-df7f75430ad2)
+9. [Pensamiento ético-revolucionario Che.](https://chatgpt.com/c/b6fb68cd-66e1-4a27-a7e6-231f1f9f5d57)
+
+[]()
+
+[Añadir un área de trabajo de Team**Colabora en un plan Team**]()
+
+ChatGPT **4o**
+
+Necesito que te comportes como un cientifico de la computacion experto en simulaciones para los experimentos q haremos a continuacion
+
+¡Por supuesto! Estoy listo para ayudarte con tus experimentos de simulación. ¿Qué tipo de simulación necesitas realizar y qué detalles específicos quieres que exploremos?
+
+Estas familiarizado con la simulacion de eventos discretos??
+
+Sí, estoy familiarizado con la simulación de eventos discretos (DES). La simulación de eventos discretos es una técnica utilizada para modelar sistemas en los que los cambios en el estado ocurren en puntos discretos en el tiempo. Estos cambios son provocados por eventos específicos, como llegadas, salidas, fallos, reparaciones, etc.
+
+Podemos realizar simulaciones DES en varios dominios, como la gestión de colas, sistemas de manufactura, redes de computadoras, entre otros. Aquí están algunos pasos básicos que podemos seguir para llevar a cabo una simulación DES:
+
+1. **Definir el objetivo de la simulación**: ¿Qué fenómeno o sistema queremos modelar y qué preguntas queremos responder?
+2. **Desarrollar un modelo conceptual**: Identificar las entidades del sistema, los eventos que pueden ocurrir, y las variables de estado que describen el sistema en cualquier punto en el tiempo.
+3. **Implementar el modelo**: Codificar el modelo en un lenguaje de programación adecuado. Python y C++ son populares para DES debido a sus bibliotecas y herramientas de simulación.
+4. **Validar y verificar el modelo**: Asegurarse de que el modelo es una representación precisa del sistema real y que está libre de errores de implementación.
+5. **Ejecutar la simulación**: Ejecutar el modelo para diferentes escenarios y recopilar datos sobre el rendimiento del sistema.
+6. **Analizar los resultados**: Interpretar los datos recopilados para tomar decisiones informadas.
+
+Si tienes un caso específico de simulación en mente o necesitas ayuda en una parte particular del proceso, por favor, proporciona más detalles y comenzaremos de inmediato.
+
+Quiero simular el comportamiento de una biblioteca. En la misma un estudiante trabaja como encargado por las noches y es el único en el mostrador durante todo su turno de trabajo. Las llegadas al mostrador siguen una distribución de Poisson con una media de 8 por hora. Cada usuario de la biblioteca es atendido de uno en uno, y el tiempo de servicio sigue una distribución exponencial con una media de 5 minutos. Quiero hacer la simulacion haciendo uso de python
+
+¡Perfecto! Podemos modelar esta situación como un sistema de colas simple, donde los clientes (usuarios de la biblioteca) llegan de acuerdo a un proceso de Poisson y son atendidos con tiempos de servicio exponenciales.
+
+Vamos a utilizar Python para implementar esta simulación. Usaremos la biblioteca `simpy`, que es excelente para este tipo de simulaciones de eventos discretos. Aquí te dejo un ejemplo de cómo podríamos implementar este modelo:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+
+# Parámetros del sistema
+MEDIA_LLEGADAS = 8  # media de llegadas por hora
+MEDIA_SERVICIO = 5  # media de tiempo de servicio en minutos
+
+# Convertir media de llegadas a intervalos de tiempo entre llegadas (en minutos)
+intervalo_llegadas = 60 / MEDIA_LLEGADAS
+
+def llegada_cliente(env, servidor):
+    """Generador de eventos de llegada de clientes"""
+    while True:
+        yield env.timeout(np.random.exponential(intervalo_llegadas))
+        env.process(servicio_cliente(env, servidor))
+
+def servicio_cliente(env, servidor):
+    """Proceso de servicio de un cliente"""
+    with servidor.request() as req:
+        yield req
+        yield env.timeout(np.random.exponential(MEDIA_SERVICIO))
+        print(f"Cliente atendido a las {env.now:.2f} minutos")
+
+# Configuración de la simulación
+env = simpy.Environment()
+servidor = simpy.Resource(env, capacity=1)  # Solo un encargado en el mostrador
+
+# Iniciar el generador de llegadas de clientes
+env.process(llegada_cliente(env, servidor))
+
+# Ejecutar la simulación por un tiempo definido (por ejemplo, 8 horas)
+tiempo_simulacion = 8 * 60  # en minutos
+env.run(until=tiempo_simulacion)
+</code></div></div></pre>
+
+Este script simula el comportamiento de la biblioteca durante 8 horas (480 minutos). Aquí hay un desglose de lo que hace el código:
+
+1. **Definición de Parámetros**: Establecemos la media de llegadas por hora y la media de tiempo de servicio en minutos.
+2. **Generador de Llegadas de Clientes**: Usamos una distribución exponencial para modelar el tiempo entre llegadas de clientes.
+3. **Proceso de Servicio de Clientes**: Cada cliente es atendido por el encargado (servidor) y el tiempo de servicio sigue una distribución exponencial.
+4. **Configuración y Ejecución de la Simulación**: Configuramos el entorno de la simulación y ejecutamos la simulación durante 8 horas.
+
+Puedes ajustar `tiempo_simulacion` para ejecutar la simulación durante diferentes períodos de tiempo y observar cómo varía el comportamiento del sistema. ¿Te gustaría agregar alguna otra característica o detalle a esta simulación?
+
+Necesito q m expliques paso a paso q hacen cada uno de las funciones de simpy q se usan. Ademas donde quedo la distribucion poisson?
+
+Claro, te explicaré paso a paso el uso de cada función de `simpy` en el código y cómo la distribución de Poisson se refleja en el modelo. También corregiré la omisión sobre la distribución de Poisson en el tiempo entre llegadas.
+
+### Paso a Paso del Código
+
+1. **Importación de bibliotecas**:
+   <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+* <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+  import numpy as np
+  </code></div></div></pre>
+
+  Aquí importamos `simpy` para la simulación y `numpy` para generar números aleatorios.
+* **Definición de parámetros del sistema**:
+
+  <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+* <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">MEDIA_LLEGADAS = 8  # media de llegadas por hora
+  MEDIA_SERVICIO = 5  # media de tiempo de servicio en minutos
+
+  # Convertir media de llegadas a intervalos de tiempo entre llegadas (en minutos)
+  intervalo_llegadas = 60 / MEDIA_LLEGADAS
+  </code></div></div></pre>
+
+  `MEDIA_LLEGADAS` representa la tasa media de llegadas por hora (8 llegadas por hora). `MEDIA_SERVICIO` representa el tiempo medio de servicio por cliente (5 minutos). Convertimos la tasa de llegadas por hora a un intervalo de tiempo entre llegadas en minutos (`intervalo_llegadas`).
+* **Generador de llegadas de clientes**:
+
+  <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+* <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">def llegada_cliente(env, servidor):
+      """Generador de eventos de llegada de clientes"""
+      while True:
+          yield env.timeout(np.random.exponential(intervalo_llegadas))
+          env.process(servicio_cliente(env, servidor))
+  </code></div></div></pre>
+
+  `llegada_cliente` es una función generadora que simula la llegada de clientes a la biblioteca:
+
+  * `env.timeout(...)` hace que la función espere (simule el paso del tiempo) un intervalo aleatorio de tiempo. `np.random.exponential(intervalo_llegadas)` genera el tiempo entre llegadas usando una distribución exponencial. Esta distribución exponencial es el resultado del proceso de Poisson de llegadas, donde el tiempo entre eventos (llegadas) sigue una distribución exponencial.
+  * `env.process(servicio_cliente(env, servidor))` crea un nuevo proceso para atender al cliente que acaba de llegar.
+* **Proceso de servicio de clientes**:
+
+  <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+* <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">def servicio_cliente(env, servidor):
+      """Proceso de servicio de un cliente"""
+      with servidor.request() as req:
+          yield req
+          yield env.timeout(np.random.exponential(MEDIA_SERVICIO))
+          print(f"Cliente atendido a las {env.now:.2f} minutos")
+  </code></div></div></pre>
+
+  `servicio_cliente` es una función que simula el proceso de atender a un cliente:
+
+  * `with servidor.request() as req:` simula la solicitud de uso del recurso (el encargado del mostrador). `servidor` es un recurso con una capacidad de 1 (un solo encargado).
+  * `yield req` espera hasta que el recurso esté disponible.
+  * `yield env.timeout(np.random.exponential(MEDIA_SERVICIO))` simula el tiempo de servicio para el cliente, que sigue una distribución exponencial con media `MEDIA_SERVICIO` minutos.
+  * `print(f"Cliente atendido a las {env.now:.2f} minutos")` imprime un mensaje indicando cuándo fue atendido el cliente.
+* **Configuración y ejecución de la simulación**:
+
+  <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+1. <pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">env = simpy.Environment()
+   servidor = simpy.Resource(env, capacity=1)  # Solo un encargado en el mostrador
+
+   # Iniciar el generador de llegadas de clientes
+   env.process(llegada_cliente(env, servidor))
+
+   # Ejecutar la simulación por un tiempo definido (por ejemplo, 8 horas)
+   tiempo_simulacion = 8 * 60  # en minutos
+   env.run(until=tiempo_simulacion)
+   </code></div></div></pre>
+
+   * `env = simpy.Environment()` crea un entorno de simulación.
+   * `servidor = simpy.Resource(env, capacity=1)` define un recurso con capacidad 1, representando al encargado del mostrador.
+   * `env.process(llegada_cliente(env, servidor))` inicia el proceso de generación de llegadas de clientes.
+   * `env.run(until=tiempo_simulacion)` ejecuta la simulación durante `tiempo_simulacion` minutos (8 horas).
+
+### Distribución de Poisson
+
+En un proceso de Poisson, el tiempo entre llegadas sigue una distribución exponencial. Específicamente, si las llegadas ocurren con una tasa media de 8 por hora, el tiempo entre llegadas sigue una distribución exponencial con media de 608**8**60**** minutos (7.5 minutos). Por lo tanto, el uso de `np.random.exponential(intervalo_llegadas)` modela correctamente las llegadas de acuerdo con una distribución de Poisson.
+
+¿Hay algún otro aspecto de la simulación que te gustaría explorar o algún ajuste que necesites hacer?
+
+necesito de esta simulacion extraer ciertas estadisticas para un csv. Entre estas pudieran estar la cantidad de personas q hay en la cola, el tiempo de espera de estas, el tiempo que el estudiante no hace nada, etc. Todo esto con el fin de trazarme estrategias luego a partir de determinados criterios
+
+Para recopilar estadísticas sobre la simulación y guardarlas en un archivo CSV, vamos a modificar el código de la simulación. Añadiremos variables para almacenar las estadísticas y luego usaremos la biblioteca `csv` de Python para escribir estos datos en un archivo CSV.
+
+A continuación, te muestro cómo puedes hacerlo:
+
+1. **Añadir variables de estadísticas**:
+   * Número de personas en la cola.
+   * Tiempo de espera de los clientes.
+   * Tiempo que el encargado no hace nada (idle time).
+2. **Modificar los procesos para registrar estadísticas**.
+3. **Guardar las estadísticas en un archivo CSV**.
+
+Aquí tienes el código modificado:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# Parámetros del sistema
+MEDIA_LLEGADAS = 8  # media de llegadas por hora
+MEDIA_SERVICIO = 5  # media de tiempo de servicio en minutos
+
+# Convertir media de llegadas a intervalos de tiempo entre llegadas (en minutos)
+intervalo_llegadas = 60 / MEDIA_LLEGADAS
+
+# Variables para recopilar estadísticas
+tiempos_espera = []
+tiempos_idle = []
+numero_personas_en_cola = []
+
+def llegada_cliente(env, servidor, cola, idle_time):
+    """Generador de eventos de llegada de clientes"""
+    while True:
+        yield env.timeout(np.random.exponential(intervalo_llegadas))
+        env.process(servicio_cliente(env, servidor, env.now, cola, idle_time))
+
+def servicio_cliente(env, servidor, tiempo_llegada, cola, idle_time):
+    """Proceso de servicio de un cliente"""
+    with servidor.request() as req:
+        cola.append(len(servidor.queue))
+        yield req
+        tiempo_espera = env.now - tiempo_llegada
+        tiempos_espera.append(tiempo_espera)
+      
+        tiempo_idle = max(0, tiempo_llegada - idle_time[0])
+        tiempos_idle.append(tiempo_idle)
+        idle_time[0] = env.now + np.random.exponential(MEDIA_SERVICIO)
+      
+        yield env.timeout(np.random.exponential(MEDIA_SERVICIO))
+        print(f"Cliente atendido a las {env.now:.2f} minutos")
+
+# Configuración de la simulación
+env = simpy.Environment()
+servidor = simpy.Resource(env, capacity=1)  # Solo un encargado en el mostrador
+cola = []
+idle_time = [0]
+
+# Iniciar el generador de llegadas de clientes
+env.process(llegada_cliente(env, servidor, cola, idle_time))
+
+# Ejecutar la simulación por un tiempo definido (por ejemplo, 8 horas)
+tiempo_simulacion = 8 * 60  # en minutos
+env.run(until=tiempo_simulacion)
+
+# Guardar estadísticas en un archivo CSV
+with open('estadisticas_simulacion.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Tiempo de Espera', 'Tiempo Idle', 'Numero de Personas en Cola'])
+    for i in range(len(tiempos_espera)):
+        writer.writerow([
+            tiempos_espera[i], 
+            tiempos_idle[i] if i < len(tiempos_idle) else '', 
+            cola[i] if i < len(cola) else ''
+        ])
+
+print("Estadísticas guardadas en 'estadisticas_simulacion.csv'")
+</code></div></div></pre>
+
+### Explicación de las Modificaciones
+
+1. **Variables de estadísticas**:
+   * `tiempos_espera`: Lista para almacenar el tiempo de espera de cada cliente.
+   * `tiempos_idle`: Lista para almacenar el tiempo que el encargado está inactivo.
+   * `numero_personas_en_cola`: Lista para almacenar el número de personas en la cola cuando cada cliente llega.
+2. **Modificar los procesos**:
+   * En `llegada_cliente`, ahora pasamos `cola` e `idle_time` para registrar estadísticas.
+   * En `servicio_cliente`, registramos el tiempo de espera (`env.now - tiempo_llegada`) y el número de personas en la cola (`len(servidor.queue)`).
+   * Calculamos el tiempo idle basado en el tiempo de llegada y el último tiempo que el servidor estaba ocupado (`idle_time[0]`).
+3. **Guardar estadísticas en CSV**:
+   * Usamos la biblioteca `csv` para escribir las estadísticas en un archivo llamado `estadisticas_simulacion.csv`.
+
+Este código generará un archivo CSV con las estadísticas de la simulación, que puedes analizar para desarrollar estrategias basadas en los datos obtenidos. ¿Hay algún otro detalle que quieras agregar o algún aspecto específico que desees explorar más a fondo?
+
+no m queda claro como calculas el tiempo en el q el estudiante no esta hciendo nada??
+
+Entiendo tu preocupación. Vamos a detallar cómo se puede calcular de manera correcta el tiempo en que el estudiante (encargado del mostrador) no está haciendo nada, es decir, cuando no está atendiendo a ningún cliente.
+
+Para calcular el tiempo idle del encargado, necesitamos rastrear cuándo termina de atender a un cliente y cuándo llega el próximo cliente. Si el encargado termina de atender a un cliente y no hay otros en la cola, entonces el tiempo entre el final de este servicio y la llegada del próximo cliente es tiempo idle.
+
+Aquí está el código modificado para hacer un cálculo más claro y correcto del tiempo idle:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# Parámetros del sistema
+MEDIA_LLEGADAS = 8  # media de llegadas por hora
+MEDIA_SERVICIO = 5  # media de tiempo de servicio en minutos
+
+# Convertir media de llegadas a intervalos de tiempo entre llegadas (en minutos)
+intervalo_llegadas = 60 / MEDIA_LLEGADAS
+
+# Variables para recopilar estadísticas
+tiempos_espera = []
+tiempos_idle = []
+numero_personas_en_cola = []
+
+def llegada_cliente(env, servidor, cola, ultimo_tiempo_servicio):
+    """Generador de eventos de llegada de clientes"""
+    while True:
+        yield env.timeout(np.random.exponential(intervalo_llegadas))
+        if servidor.count == 0 and len(servidor.queue) == 0:
+            # Si el servidor está libre y no hay cola, entonces se añade tiempo idle
+            tiempo_idle = env.now - ultimo_tiempo_servicio[0]
+            tiempos_idle.append(tiempo_idle)
+        env.process(servicio_cliente(env, servidor, env.now, cola, ultimo_tiempo_servicio))
+
+def servicio_cliente(env, servidor, tiempo_llegada, cola, ultimo_tiempo_servicio):
+    """Proceso de servicio de un cliente"""
+    with servidor.request() as req:
+        cola.append(len(servidor.queue))
+        yield req
+        tiempo_espera = env.now - tiempo_llegada
+        tiempos_espera.append(tiempo_espera)
+
+        yield env.timeout(np.random.exponential(MEDIA_SERVICIO))
+        ultimo_tiempo_servicio[0] = env.now
+        print(f"Cliente atendido a las {env.now:.2f} minutos")
+
+# Configuración de la simulación
+env = simpy.Environment()
+servidor = simpy.Resource(env, capacity=1)  # Solo un encargado en el mostrador
+cola = []
+ultimo_tiempo_servicio = [0]  # Tiempo en que el servidor terminó de atender al último cliente
+
+# Iniciar el generador de llegadas de clientes
+env.process(llegada_cliente(env, servidor, cola, ultimo_tiempo_servicio))
+
+# Ejecutar la simulación por un tiempo definido (por ejemplo, 8 horas)
+tiempo_simulacion = 8 * 60  # en minutos
+env.run(until=tiempo_simulacion)
+
+# Guardar estadísticas en un archivo CSV
+with open('estadisticas_simulacion.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Tiempo de Espera', 'Tiempo Idle', 'Numero de Personas en Cola'])
+    for i in range(len(tiempos_espera)):
+        writer.writerow([
+            tiempos_espera[i], 
+            tiempos_idle[i] if i < len(tiempos_idle) else '', 
+            cola[i] if i < len(cola) else ''
+        ])
+
+print("Estadísticas guardadas en 'estadisticas_simulacion.csv'")
+</code></div></div></pre>
+
+### Explicación del cálculo del tiempo idle
+
+1. **Variable `ultimo_tiempo_servicio`**:
+   * Se inicializa con `[0]` y se actualiza cada vez que un cliente es atendido.
+   * Almacena el tiempo en que el servidor terminó de atender al último cliente.
+2. **Cálculo del tiempo idle**:
+   * En la función `llegada_cliente`, se verifica si el servidor está libre (`servidor.count == 0`) y no hay clientes en la cola (`len(servidor.queue) == 0`).
+   * Si ambas condiciones son verdaderas, se calcula el tiempo idle como `env.now - ultimo_tiempo_servicio[0]` y se añade a la lista `tiempos_idle`.
+3. **Actualización del `ultimo_tiempo_servicio`**:
+   * En la función `servicio_cliente`, después de atender al cliente y antes de finalizar el proceso, se actualiza `ultimo_tiempo_servicio[0]` con `env.now`.
+
+Con estas modificaciones, el tiempo idle del encargado se calcula correctamente y se registra en la lista `tiempos_idle`, que luego se guarda en el archivo CSV junto con otras estadísticas. ¿Hay algún otro aspecto que quieras explorar o ajustar en la simulación?
+
+Mucho mejor asi, ahora quiero q refactorices el codigo. Puedes empezar por poner todas los nombres en ingles. Ademas necesito q yengas un metodo principal main. Por otra parte pretendo hacer varias simulaciones asi q en el csv no m interesa guardar todos esos datos. Cada simulacion debe aportarle al csv una unica linea, por lo q en lugar de guardar los arreglos sera mejor guardar informacion representartiva d estos como maximos, minimos o promedios.
+
+Entendido, refactorizaré el código para usar nombres en inglés, agregaré un método principal `main` y ajustaré la lógica para que cada simulación agregue una única línea de datos representativos al archivo CSV.
+
+### Código Refactorizado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+# Variables to collect statistics
+wait_times = []
+idle_times = []
+queue_lengths = []
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+
+def run_simulation(simulation_time):
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=simulation_time)
+
+def main():
+    simulation_time = 8 * 60  # in minutes
+    num_simulations = 10
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Min Queue Length', 'Mean Queue Length'])
+
+        for _ in range(num_simulations):
+            global wait_times, idle_times, queue_lengths
+            wait_times = []
+            idle_times = []
+            queue_lengths = []
+
+            run_simulation(simulation_time)
+
+            max_wait_time = max(wait_times) if wait_times else 0
+            min_wait_time = min(wait_times) if wait_times else 0
+            mean_wait_time = np.mean(wait_times) if wait_times else 0
+
+            max_idle_time = max(idle_times) if idle_times else 0
+            min_idle_time = min(idle_times) if idle_times else 0
+            mean_idle_time = np.mean(idle_times) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            min_queue_length = min(queue_lengths) if queue_lengths else 0
+            mean_queue_length = np.mean(queue_lengths) if queue_lengths else 0
+
+            writer.writerow([
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, min_queue_length, mean_queue_length
+            ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Código Refactorizado
+
+1. **Nombres en inglés**:
+   * `llegada_cliente` -> `customer_arrival`
+   * `servicio_cliente` -> `customer_service`
+   * `tiempos_espera` -> `wait_times`
+   * `tiempos_idle` -> `idle_times`
+   * `numero_personas_en_cola` -> `queue_lengths`
+2. **Método principal `main`**:
+   * Define `simulation_time` y `num_simulations` para controlar la duración y número de simulaciones.
+   * Abre el archivo CSV y escribe los encabezados.
+   * Ejecuta múltiples simulaciones (`num_simulations`) y guarda una única línea representativa de estadísticas para cada simulación.
+3. **Recopilación de datos representativos**:
+   * En lugar de guardar todos los datos, se calculan y guardan los máximos, mínimos y promedios de los tiempos de espera, tiempos idle y longitudes de cola.
+
+Este código proporcionará un archivo CSV con estadísticas representativas de cada simulación, facilitando el análisis posterior. ¿Hay algún otro ajuste o característica que te gustaría agregar?
+
+perfecto
+
+¡Me alegra que estés satisfecho! Si necesitas más ayuda con esta simulación o cualquier otro aspecto de tu proyecto, no dudes en pedirlo. Aquí te dejo el código final refactorizado una vez más para tu comodidad:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+# Variables to collect statistics
+wait_times = []
+idle_times = []
+queue_lengths = []
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+
+def run_simulation(simulation_time):
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=simulation_time)
+
+def main():
+    simulation_time = 8 * 60  # in minutes
+    num_simulations = 10
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Min Queue Length', 'Mean Queue Length'])
+
+        for _ in range(num_simulations):
+            global wait_times, idle_times, queue_lengths
+            wait_times = []
+            idle_times = []
+            queue_lengths = []
+
+            run_simulation(simulation_time)
+
+            max_wait_time = max(wait_times) if wait_times else 0
+            min_wait_time = min(wait_times) if wait_times else 0
+            mean_wait_time = np.mean(wait_times) if wait_times else 0
+
+            max_idle_time = max(idle_times) if idle_times else 0
+            min_idle_time = min(idle_times) if idle_times else 0
+            mean_idle_time = np.mean(idle_times) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            min_queue_length = min(queue_lengths) if queue_lengths else 0
+            mean_queue_length = np.mean(queue_lengths) if queue_lengths else 0
+
+            writer.writerow([
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, min_queue_length, mean_queue_length
+            ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+¡Buena suerte con tus simulaciones y análisis! Si surge alguna otra duda o necesitas más funcionalidades, estaré aquí para ayudarte.
+
+Mira pensandolo bien no tiene sentido guardar la cantidad minima de personas en la cola. Creo q es mas interesante guardar la cantidad total de personas atendidas. Por otro lado creo q con dos cifras despues de la coma m es suficiente para las estadisticas
+
+2/2
+
+Claro, voy a ajustar el código para que guarde la cantidad total de personas atendidas en lugar de la cantidad mínima de personas en la cola, y asegurar que las estadísticas se guarden con dos cifras decimales.
+
+### Código Refactorizado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+# Variables to collect statistics
+wait_times = []
+idle_times = []
+queue_lengths = []
+total_customers_served = 0
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+
+def run_simulation(simulation_time):
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=simulation_time)
+
+def main():
+    simulation_time = 8 * 60  # in minutes
+    num_simulations = 10
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        for _ in range(num_simulations):
+            global wait_times, idle_times, queue_lengths, total_customers_served
+            wait_times = []
+            idle_times = []
+            queue_lengths = []
+            total_customers_served = 0
+
+            run_simulation(simulation_time)
+
+            max_wait_time = round(max(wait_times), 2) if wait_times else 0
+            min_wait_time = round(min(wait_times), 2) if wait_times else 0
+            mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+            max_idle_time = round(max(idle_times), 2) if idle_times else 0
+            min_idle_time = round(min(idle_times), 2) if idle_times else 0
+            mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+            writer.writerow([
+                total_customers_served,
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, mean_queue_length
+            ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Cambios Realizados
+
+1. **Cantidad total de personas atendidas**:
+   * Añadida la variable `total_customers_served` para contar el total de clientes atendidos durante la simulación.
+   * Incremento de `total_customers_served` cada vez que un cliente llega.
+2. **Formato de estadísticas**:
+   * Uso de `round` para limitar los valores a dos cifras decimales al guardar los datos en el CSV.
+3. **Columnas del CSV**:
+   * Eliminada la columna "Min Queue Length".
+   * Añadida la columna "Total Customers Served".
+
+Este código proporcionará un archivo CSV con estadísticas representativas de cada simulación, incluyendo el número total de clientes atendidos y otras estadísticas calculadas con dos cifras decimales.
+
+por que inicializas dos veces las variables globales??
+
+Tienes razón, la inicialización de las variables globales debería hacerse una sola vez dentro del bucle de simulaciones en la función `main`, y no antes de la función `run_simulation`. Aquí tienes el código corregido para evitar la inicialización redundante:
+
+### Código Corregido
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+
+def run_simulation(simulation_time):
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=simulation_time)
+
+def main():
+    simulation_time = 8 * 60  # in minutes
+    num_simulations = 10
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        for _ in range(num_simulations):
+            run_simulation(simulation_time)
+
+            max_wait_time = round(max(wait_times), 2) if wait_times else 0
+            min_wait_time = round(min(wait_times), 2) if wait_times else 0
+            mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+            max_idle_time = round(max(idle_times), 2) if idle_times else 0
+            min_idle_time = round(min(idle_times), 2) if idle_times else 0
+            mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+            writer.writerow([
+                total_customers_served,
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, mean_queue_length
+            ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Cambios Realizados
+
+1. **Inicialización de variables globales**:
+   * Mueve la inicialización de `wait_times`, `idle_times`, `queue_lengths` y `total_customers_served` dentro de la función `run_simulation` para que se realice solo una vez por cada simulación.
+2. **Eliminación de inicialización redundante**:
+   * Elimina la inicialización redundante de las variables globales fuera del bucle de simulaciones.
+
+Con estos cambios, el código inicializa las variables globales correctamente antes de cada simulación y garantiza que cada ejecución de la simulación comience con variables limpias.
+
+hey!, nunca estas actualizando queue\_lengths
+
+Tienes razón, me faltó actualizar `queue_lengths`. Vamos a corregir esto asegurándonos de registrar la longitud de la cola cada vez que un nuevo cliente llega y cada vez que un cliente es atendido.
+
+### Código Corregido con `queue_lengths` Actualizado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+        queue_lengths.append(len(server.queue))
+
+def run_simulation(simulation_time):
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=simulation_time)
+
+def main():
+    simulation_time = 8 * 60  # in minutes
+    num_simulations = 10
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        for _ in range(num_simulations):
+            run_simulation(simulation_time)
+
+            max_wait_time = round(max(wait_times), 2) if wait_times else 0
+            min_wait_time = round(min(wait_times), 2) if wait_times else 0
+            mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+            max_idle_time = round(max(idle_times), 2) if idle_times else 0
+            min_idle_time = round(min(idle_times), 2) if idle_times else 0
+            mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+            writer.writerow([
+                total_customers_served,
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, mean_queue_length
+            ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Actualización de `queue_lengths`**:
+   * En `customer_arrival`, después de que un cliente llega y se crea un proceso de servicio, se registra la longitud de la cola (`queue_lengths.append(len(server.queue))`).
+   * En `customer_service`, después de que un cliente es atendido, se registra nuevamente la longitud de la cola (`queue_lengths.append(len(server.queue))`).
+
+Con estas correcciones, `queue_lengths` se actualizará correctamente y reflejará la longitud de la cola en los momentos clave durante la simulación. Las estadísticas se calcularán con dos cifras decimales y se guardarán en un archivo CSV con la información representativa de cada simulación.
+
+En este punto estamos haciendo 10 simulaciones del fenomeno. Sin embargo creo q este criterio de parada puede no ser el mas acertado. Se t ocurre otro??
+
+Claro, podemos considerar otros criterios de parada para la simulación. Dos enfoques comunes son:
+
+1. **Basado en el tiempo simulado**: La simulación se ejecuta hasta un tiempo simulado especificado, asegurando que cubrimos un período suficientemente largo para capturar el comportamiento del sistema.
+2. **Basado en el número de eventos**: La simulación se detiene después de que un cierto número de eventos ha ocurrido, por ejemplo, un número específico de clientes atendidos.
+
+Dado que ya estamos usando el tiempo simulado como criterio de parada en cada ejecución individual, podemos cambiar el criterio general para determinar cuándo detenernos. Por ejemplo, podríamos detener la simulación después de que se haya atendido a un cierto número total de clientes en todas las simulaciones combinadas.
+
+### Código Refactorizado con Criterio de Parada Basado en el Número Total de Clientes Atendidos
+
+Aquí te dejo un ejemplo de cómo hacerlo:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+TOTAL_CUSTOMERS_THRESHOLD = 1000  # Total number of customers to serve before stopping
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+def customer_arrival(env, server, queue, last_service_time, stop_event):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if total_customers_served >= TOTAL_CUSTOMERS_THRESHOLD:
+            stop_event.succeed()
+            break
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+        queue_lengths.append(len(server.queue))
+
+def run_simulation():
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+    stop_event = env.event()
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time, stop_event))
+
+    # Run the simulation until the stop_event is triggered
+    env.run(until=stop_event)
+
+def main():
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        run_simulation()
+
+        max_wait_time = round(max(wait_times), 2) if wait_times else 0
+        min_wait_time = round(min(wait_times), 2) if wait_times else 0
+        mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+        max_idle_time = round(max(idle_times), 2) if idle_times else 0
+        min_idle_time = round(min(idle_times), 2) if idle_times else 0
+        mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+        max_queue_length = max(queue_lengths) if queue_lengths else 0
+        mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+        writer.writerow([
+            total_customers_served,
+            max_wait_time, min_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length
+        ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Criterio de Parada
+
+1. **Total Customers Threshold**:
+   * Definimos `TOTAL_CUSTOMERS_THRESHOLD` como el número total de clientes que deseamos servir antes de detener la simulación (en este caso, 1000).
+2. **Stop Event**:
+   * Utilizamos un evento de parada (`stop_event`) en `simpy` que se dispara cuando se alcanza el número total de clientes atendidos.
+3. **Customer Arrival**:
+   * En la función `customer_arrival`, verificamos si el número total de clientes atendidos ha alcanzado el umbral (`TOTAL_CUSTOMERS_THRESHOLD`). Si es así, se dispara el evento de parada (`stop_event.succeed()`) y se sale del bucle.
+4. **Run Simulation**:
+   * La función `run_simulation` se ejecuta hasta que se dispare el `stop_event`, indicando que se ha alcanzado el número deseado de clientes atendidos.
+
+Este enfoque asegura que la simulación se detenga después de un número específico de eventos (clientes atendidos), proporcionando un criterio de parada más adecuado para tu análisis.
+
+No este enfoque tampoco m gusta. Creo q alfuna vez lei sobre un criterio de parada basado en cierta estadistida. Se fijaba en la desviacion tipica dividido por algo. T suena??
+
+Sí, el criterio de parada al que te refieres probablemente es el basado en la **convergencia de la media** o el **análisis de la estabilidad de la varianza**. En este enfoque, la simulación se detiene cuando la estimación de la media de una estadística clave se estabiliza, es decir, cuando la varianza relativa de la media (desviación estándar dividida por la raíz cuadrada del número de observaciones) cae por debajo de un umbral predefinido.
+
+Podemos aplicar este criterio a la media de los tiempos de espera de los clientes, por ejemplo. Aquí tienes cómo podríamos hacerlo:
+
+### Código con Criterio de Parada Basado en la Convergencia de la Media
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+CONVERGENCE_THRESHOLD = 0.01  # Convergence threshold for stopping criterion
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+def customer_arrival(env, server, queue, last_service_time, stop_event):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+
+        # Check convergence criterion
+        if len(wait_times) > 1:
+            mean_wait = np.mean(wait_times)
+            std_dev_wait = np.std(wait_times, ddof=1)
+            relative_error = std_dev_wait / np.sqrt(len(wait_times)) / mean_wait
+            if relative_error < CONVERGENCE_THRESHOLD:
+                stop_event.succeed()
+                break
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+        queue_lengths.append(len(server.queue))
+
+def run_simulation():
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+    stop_event = env.event()
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time, stop_event))
+
+    # Run the simulation until the stop_event is triggered
+    env.run(until=stop_event)
+
+def main():
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        run_simulation()
+
+        max_wait_time = round(max(wait_times), 2) if wait_times else 0
+        min_wait_time = round(min(wait_times), 2) if wait_times else 0
+        mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+        max_idle_time = round(max(idle_times), 2) if idle_times else 0
+        min_idle_time = round(min(idle_times), 2) if idle_times else 0
+        mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+        max_queue_length = max(queue_lengths) if queue_lengths else 0
+        mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+        writer.writerow([
+            total_customers_served,
+            max_wait_time, min_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length
+        ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Criterio de Parada
+
+1. **Criterio de convergencia**:
+   * Definimos `CONVERGENCE_THRESHOLD` como el umbral de convergencia. En este caso, 0.01 significa que la simulación se detendrá cuando la varianza relativa de la media del tiempo de espera sea menor al 1%.
+2. **Verificación del criterio en `customer_arrival`**:
+   * Después de que cada cliente llega y se agrega a la lista de tiempos de espera (`wait_times`), calculamos la media y la desviación estándar de los tiempos de espera.
+   * Calculamos el error relativo como `std_dev_wait / np.sqrt(len(wait_times)) / mean_wait`.
+   * Si el error relativo cae por debajo del umbral de convergencia (`CONVERGENCE_THRESHOLD`), se dispara el evento de parada (`stop_event.succeed()`) y se sale del bucle.
+3. **Ejecución de la simulación**:
+   * La función `run_simulation` se ejecuta hasta que el evento de parada se dispare, indicando que se ha alcanzado la convergencia deseada.
+
+Este enfoque garantiza que la simulación se detenga cuando la estimación de la media de los tiempos de espera se estabilice, proporcionando un criterio de parada basado en la estadística clave del sistema.
+
+Este enfoque me gusta muchisimo pero prefiero q se guie por la cantidad de personas atendidas en lugar de los tiempos de espera
+
+Perfecto, ajustaremos el criterio de parada para basarlo en la cantidad de personas atendidas en lugar de los tiempos de espera. Esto implica que controlaremos la convergencia de la media de la cantidad de personas atendidas.
+
+Aquí tienes el código modificado:
+
+### Código Modificado con Criterio de Parada Basado en la Cantidad de Personas Atendidas
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+CONVERGENCE_THRESHOLD = 0.01  # Convergence threshold for stopping criterion
+
+# Convert mean arrival rate to inter-arrival time (in minutes)
+inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+
+# Variables to collect statistics
+wait_times = []
+idle_times = []
+queue_lengths = []
+customers_served = []
+
+def customer_arrival(env, server, queue, last_service_time, stop_event):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(inter_arrival_time))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+        customers_served.append(total_customers_served)
+
+        # Check convergence criterion
+        if len(customers_served) > 1:
+            mean_served = np.mean(customers_served)
+            std_dev_served = np.std(customers_served, ddof=1)
+            relative_error = std_dev_served / np.sqrt(len(customers_served)) / mean_served
+            if relative_error < CONVERGENCE_THRESHOLD:
+                stop_event.succeed()
+                break
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+        queue_lengths.append(len(server.queue))
+
+def run_simulation():
+    global wait_times, idle_times, queue_lengths, total_customers_served, customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+    customers_served = []
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+    stop_event = env.event()
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time, stop_event))
+
+    # Run the simulation until the stop_event is triggered
+    env.run(until=stop_event)
+
+def main():
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        run_simulation()
+
+        max_wait_time = round(max(wait_times), 2) if wait_times else 0
+        min_wait_time = round(min(wait_times), 2) if wait_times else 0
+        mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+        max_idle_time = round(max(idle_times), 2) if idle_times else 0
+        min_idle_time = round(min(idle_times), 2) if idle_times else 0
+        mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+        max_queue_length = max(queue_lengths) if queue_lengths else 0
+        mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+        writer.writerow([
+            total_customers_served,
+            max_wait_time, min_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length
+        ])
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Criterio de Parada Basado en la Cantidad de Personas Atendidas
+
+1. **Criterio de Convergencia**:
+   * Definimos `CONVERGENCE_THRESHOLD` como el umbral de convergencia. En este caso, 0.01 significa que la simulación se detendrá cuando la varianza relativa de la media del número de personas atendidas sea menor al 1%.
+2. **Verificación del Criterio en `customer_arrival`**:
+   * Después de que cada cliente llega y se agrega a la lista de clientes atendidos (`customers_served`), calculamos la media y la desviación estándar de los clientes atendidos.
+   * Calculamos el error relativo como `std_dev_served / np.sqrt(len(customers_served)) / mean_served`.
+   * Si el error relativo cae por debajo del umbral de convergencia (`CONVERGENCE_THRESHOLD`), se dispara el evento de parada (`stop_event.succeed()`) y se sale del bucle.
+3. **Ejecución de la Simulación**:
+   * La función `run_simulation` se ejecuta hasta que el evento de parada se dispare, indicando que se ha alcanzado la convergencia deseada basada en la cantidad de personas atendidas.
+
+Este enfoque garantiza que la simulación se detenga cuando la estimación de la media de la cantidad de personas atendidas se estabilice, proporcionando un criterio de parada basado en una estadística clave del sistema.
+
+tuviste un pequenno error ahi. Yo no quiero detener una simulacion cuando se cumpla la condicion. Lo q queria detener es la cantidad de simulaciones
+
+Entiendo, deseas detener la cantidad de simulaciones cuando la media de la cantidad de personas atendidas se estabilice. Aquí tienes el código modificado para que las simulaciones continúen hasta que la desviación relativa de la media del número total de personas atendidas se estabilice:
+
+### Código Modificado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+CONVERGENCE_THRESHOLD = 0.01  # Convergence threshold for stopping criterion
+SIMULATION_TIME = 8 * 60  # in minutes, e.g., 8 hours
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(60 / MEAN_ARRIVAL_RATE))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        queue.append(len(server.queue))
+        yield req
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+        queue_lengths.append(len(server.queue))
+
+def run_simulation():
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=SIMULATION_TIME)
+
+def main():
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        while True:
+            run_simulation()
+            all_customers_served.append(total_customers_served)
+
+            max_wait_time = round(max(wait_times), 2) if wait_times else 0
+            min_wait_time = round(min(wait_times), 2) if wait_times else 0
+            mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+            max_idle_time = round(max(idle_times), 2) if idle_times else 0
+            min_idle_time = round(min(idle_times), 2) if idle_times else 0
+            mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+            writer.writerow([
+                total_customers_served,
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, mean_queue_length
+            ])
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < CONVERGENCE_THRESHOLD:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Criterio de Parada para las Simulaciones
+
+1. **Criterio de Convergencia**:
+   * Definimos `CONVERGENCE_THRESHOLD` como el umbral de convergencia. En este caso, 0.01 significa que las simulaciones se detendrán cuando la varianza relativa de la media del número de personas atendidas sea menor al 1%.
+2. **Ejecución de Múltiples Simulaciones**:
+   * En el bucle principal de `main()`, ejecutamos `run_simulation()` repetidamente.
+   * Después de cada simulación, se agrega el número total de personas atendidas (`total_customers_served`) a la lista `all_customers_served`.
+3. **Verificación del Criterio de Convergencia**:
+   * Después de cada simulación, calculamos la media y la desviación estándar del número total de personas atendidas (`all_customers_served`).
+   * Calculamos el error relativo como `std_dev_served / np.sqrt(len(all_customers_served)) / mean_served`.
+   * Si el error relativo cae por debajo del umbral de convergencia (`CONVERGENCE_THRESHOLD`), se sale del bucle, deteniendo así las simulaciones.
+
+Con este enfoque, las simulaciones continuarán ejecutándose hasta que la media del número total de personas atendidas se estabilice, asegurando que el análisis de convergencia esté basado en una estadística clave del sistema.
+
+Creo q ahi tienes un error pues estas agregando dos veces la cantidad de personas en cola. Fuera d eso todo perfecto!
+
+Gracias por señalarlo. Corregiré el código para asegurar que la longitud de la cola se registre correctamente solo una vez.
+
+### Código Corregido
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+# System parameters
+MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
+MEAN_SERVICE_TIME = 5  # mean service time in minutes
+CONVERGENCE_THRESHOLD = 0.01  # Convergence threshold for stopping criterion
+SIMULATION_TIME = 8 * 60  # in minutes, e.g., 8 hours
+
+def customer_arrival(env, server, queue, last_service_time):
+    """Customer arrival event generator"""
+    global total_customers_served
+    while True:
+        yield env.timeout(np.random.exponential(60 / MEAN_ARRIVAL_RATE))
+        if server.count == 0 and len(server.queue) == 0:
+            # If the server is idle and there is no queue, add idle time
+            idle_time = env.now - last_service_time[0]
+            idle_times.append(idle_time)
+        env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
+        total_customers_served += 1
+
+def customer_service(env, server, arrival_time, queue, last_service_time):
+    """Customer service process"""
+    with server.request() as req:
+        yield req
+        queue.append(len(server.queue))
+        wait_time = env.now - arrival_time
+        wait_times.append(wait_time)
+
+        yield env.timeout(np.random.exponential(MEAN_SERVICE_TIME))
+        last_service_time[0] = env.now
+        print(f"Customer served at {env.now:.2f} minutes")
+
+def run_simulation():
+    global wait_times, idle_times, queue_lengths, total_customers_served
+    wait_times = []
+    idle_times = []
+    queue_lengths = []
+    total_customers_served = 0
+
+    env = simpy.Environment()
+    server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+    queue = []
+    last_service_time = [0]  # Time when the server finished serving the last customer
+
+    # Start the customer arrival generator
+    env.process(customer_arrival(env, server, queue, last_service_time))
+
+    # Run the simulation for a defined time (e.g., 8 hours)
+    env.run(until=SIMULATION_TIME)
+
+def main():
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Min Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        while True:
+            run_simulation()
+            all_customers_served.append(total_customers_served)
+
+            max_wait_time = round(max(wait_times), 2) if wait_times else 0
+            min_wait_time = round(min(wait_times), 2) if wait_times else 0
+            mean_wait_time = round(np.mean(wait_times), 2) if wait_times else 0
+
+            max_idle_time = round(max(idle_times), 2) if idle_times else 0
+            min_idle_time = round(min(idle_times), 2) if idle_times else 0
+            mean_idle_time = round(np.mean(idle_times), 2) if idle_times else 0
+
+            max_queue_length = max(queue_lengths) if queue_lengths else 0
+            mean_queue_length = round(np.mean(queue_lengths), 2) if queue_lengths else 0
+
+            writer.writerow([
+                total_customers_served,
+                max_wait_time, min_wait_time, mean_wait_time,
+                max_idle_time, min_idle_time, mean_idle_time,
+                max_queue_length, mean_queue_length
+            ])
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < CONVERGENCE_THRESHOLD:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación del Cambio
+
+1. **Actualización de la cola en `customer_service`**:
+   * Mover la actualización de `queue_lengths` solo cuando un nuevo cliente llega, eliminando la segunda actualización que estaba en `customer_service`.
+
+Ahora el código correctamente registra la longitud de la cola solo una vez por cada nuevo cliente que llega. Las simulaciones continuarán ejecutándose hasta que la media del número total de personas atendidas se estabilice, proporcionando un criterio de parada basado en una estadística clave del sistema.
+
+library\_simulator.py
+
+Python
+
+Mira como va quedando. Eres capaz de refactorizar el codigo para hacerlo mas facil de leer y mas escalable?
+
+Para hacer el código más fácil de leer y más escalable, vamos a realizar algunas refactorizaciones. Esto incluirá:
+
+1. Modularizar funciones.
+2. Usar clases para encapsular la lógica.
+3. Mejorar los comentarios y la documentación.
+4. Eliminar el uso de variables globales en la medida de lo posible.
+
+Aquí está el código refactorizado:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            if server.count == 0 and len(server.queue) == 0:
+                # If the server is idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            env.process(self.customer_service(env, server, env.now, last_service_time))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            yield env.timeout(np.random.exponential(self.mean_service_time))
+            last_service_time[0] = env.now
+            print(f"Customer served at {env.now:.2f} minutes")
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=1)  # Only one server at the desk
+        last_service_time = [0]  # Time when the server finished serving the last customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length
+        ]
+
+def main():
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60  # in minutes, e.g., 8 hours
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de las Mejoras
+
+1. **Encapsulación en Clases**:
+   * Encapsulamos la lógica de la simulación en una clase `LibrarySimulator`.
+   * Esto hace que el código sea más modular y fácil de gestionar.
+2. **Métodos Claros**:
+   * Los métodos `customer_arrival`, `customer_service`, `run_simulation`, y `get_statistics` están claramente definidos dentro de la clase.
+   * Cada método tiene una responsabilidad específica, lo que mejora la legibilidad y el mantenimiento del código.
+3. **Eliminación de Variables Globales**:
+   * Eliminamos el uso de variables globales y las integramos como atributos de la clase `LibrarySimulator`.
+4. **Modularidad**:
+   * El código está mejor organizado y es más fácil de escalar. Si necesitas agregar más funcionalidad o cambiar parámetros, puedes hacerlo dentro de la clase `LibrarySimulator`.
+
+Este enfoque hace que el código sea más limpio, legible y fácil de escalar para futuros cambios o mejoras.
+
+Puedo ahora annadir mas bibliotecarios a mi problema??
+
+Sí, ahora que hemos encapsulado la lógica en una clase, es más fácil modificar el número de bibliotecarios (servidores) en la simulación. Vamos a actualizar la clase `LibrarySimulator` para que acepte un número variable de bibliotecarios y ajustemos la lógica en consecuencia.
+
+### Código Modificado para Múltiples Bibliotecarios
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            env.process(self.customer_service(env, server, env.now, last_service_time))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            yield env.timeout(np.random.exponential(self.mean_service_time))
+            last_service_time[0] = env.now
+            print(f"Customer served at {env.now:.2f} minutes")
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Número de Bibliotecarios**:
+   * Añadimos un nuevo parámetro `num_librarians` en la clase `LibrarySimulator` para especificar el número de bibliotecarios (servidores).
+   * En la función `run_simulation`, configuramos el recurso `server` con la capacidad de `num_librarians`.
+2. **Ajuste del Proceso de Llegada de Clientes**:
+   * En `customer_arrival`, verificamos si todos los servidores están inactivos y no hay cola para registrar el tiempo inactivo.
+
+Con estas modificaciones, puedes ajustar fácilmente el número de bibliotecarios en la simulación cambiando el valor de `num_librarians` en el método `main`. Esto hace que el código sea más escalable y adaptable a diferentes configuraciones.
+
+Ahora quiero annadir una regla nueva. Cuando un cliente pase mas de 5 minutos esperando en la cola este se marchara
+
+Para implementar esta nueva regla, necesitamos monitorear el tiempo de espera de cada cliente en la cola y hacer que los clientes se vayan si su tiempo de espera excede los 5 minutos. Vamos a introducir un nuevo proceso para verificar el tiempo de espera de los clientes y actualizar las funciones en consecuencia.
+
+### Código Modificado para Implementar la Regla de Abandono
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            env.process(self.customer_service(env, server, arrival_time, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            yield env.timeout(np.random.exponential(self.mean_service_time))
+            last_service_time[0] = env.now
+            print(f"Customer served at {env.now:.2f} minutes")
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                if arrival_time in [req.time for req in server.queue]:
+                    self.customers_left += 1
+                    server.queue = [req for req in server.queue if req.time != arrival_time]
+                    print(f"Customer left at {env.now:.2f} minutes after waiting too long")
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Parámetro `max_wait_time`**:
+   * Añadimos un nuevo parámetro `max_wait_time` a la clase `LibrarySimulator` para definir el tiempo máximo de espera antes de que un cliente se marche.
+2. **Función `check_wait_time`**:
+   * Esta nueva función se encarga de verificar continuamente si un cliente ha estado esperando más de `max_wait_time` minutos.
+   * Si un cliente ha estado esperando demasiado, se incrementa el contador `customers_left` y se elimina el cliente de la cola.
+3. **Actualización de `customer_arrival`**:
+   * Ahora cada vez que un cliente llega, se inicia un proceso `check_wait_time` para monitorizar el tiempo de espera de ese cliente.
+4. **Estadísticas**:
+   * Añadimos `customers_left` a las estadísticas para registrar cuántos clientes se marcharon sin ser atendidos.
+
+Con estas modificaciones, el código ahora puede manejar múltiples bibliotecarios y tiene una regla para que los clientes se marchen si esperan demasiado tiempo en la cola.
+
+AttributeError: 'Request' object has no attribute 'time'
+
+El error se debe a que los objetos `Request` en `simpy` no tienen un atributo `time`. Para solucionar esto, podemos mantener un registro separado de las llegadas de los clientes y sus tiempos de espera. Vamos a corregir el código para almacenar y verificar el tiempo de espera correctamente.
+
+### Código Corregido
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            self.customers_in_queue.append((env.now, arrival_time))
+            env.process(self.customer_service(env, server, arrival_time, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            yield env.timeout(np.random.exponential(self.mean_service_time))
+            last_service_time[0] = env.now
+            print(f"Customer served at {env.now:.2f} minutes")
+
+            # Remove customer from the queue tracking list
+            self.customers_in_queue = [(t, a) for t, a in self.customers_in_queue if a != arrival_time]
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, a in self.customers_in_queue:
+                    if a == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, a))
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Lista `customers_in_queue`**:
+   * Añadimos una lista `customers_in_queue` para hacer seguimiento de los clientes en la cola junto con sus tiempos de llegada.
+2. **Actualización de `customer_arrival` y `customer_service`**:
+   * En `customer_arrival`, añadimos el tiempo de llegada de cada cliente a `customers_in_queue`.
+   * En `customer_service`, eliminamos el cliente de `customers_in_queue` después de ser atendido.
+3. **Función `check_wait_time`**:
+   * Verificamos periódicamente si el tiempo de espera de un cliente excede `max_wait_time`.
+   * Si el tiempo de espera es demasiado largo, incrementamos `customers_left` y eliminamos al cliente de `customers_in_queue`.
+
+Con estas modificaciones, el código ahora maneja correctamente la regla de abandono de clientes que esperan demasiado tiempo en la cola.
+
+no me queda claro pq trabajas con arrival\_time como una tupla y puedes restarlo a pesar de eso con env.now. De hecho no entiendo pq necesitas llevar la primera componente de esa tupla
+
+Entiendo tu preocupación. No es necesario usar una tupla para `arrival_time`. Podemos simplificar el seguimiento de los tiempos de llegada de los clientes usando una lista simple para almacenar los tiempos de llegada y verificar si un cliente ha esperado demasiado tiempo. A continuación, te presento el código simplificado y corregido:
+
+### Código Simplificado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            self.customers_in_queue.append(arrival_time)
+            env.process(self.customer_service(env, server, arrival_time, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            yield env.timeout(np.random.exponential(self.mean_service_time))
+            last_service_time[0] = env.now
+            print(f"Customer served at {env.now:.2f} minutes")
+
+            # Remove customer from the queue tracking list
+            if arrival_time in self.customers_in_queue:
+                self.customers_in_queue.remove(arrival_time)
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                if arrival_time in self.customers_in_queue:
+                    self.customers_left += 1
+                    self.customers_in_queue.remove(arrival_time)
+                    print(f"Customer left at {env.now:.2f} minutes after waiting too long")
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Lista `customers_in_queue`**:
+   * Se utiliza una lista simple para hacer seguimiento de los tiempos de llegada de los clientes en la cola.
+2. **Actualización de `customer_arrival` y `customer_service`**:
+   * En `customer_arrival`, añadimos el tiempo de llegada de cada cliente a `customers_in_queue`.
+   * En `customer_service`, eliminamos el cliente de `customers_in_queue` después de ser atendido si está presente en la lista.
+3. **Función `check_wait_time`**:
+   * Verificamos periódicamente si el tiempo de espera de un cliente excede `max_wait_time`.
+   * Si el tiempo de espera es demasiado largo, incrementamos `customers_left` y eliminamos al cliente de `customers_in_queue`.
+
+Con estas modificaciones, el código ahora maneja correctamente la regla de abandono de clientes que esperan demasiado tiempo en la cola sin usar tuplas.
+
+Ahora quiero q los clientes puedan ser de tipo Lento rapido o normal. Q sea rapido o lento solo implica q seran atendidos con un +1 o -1  en el parametro del random.exponential
+
+Vamos a añadir diferentes tipos de clientes: Lento, Normal y Rápido. El tipo de cliente afectará el tiempo de servicio, donde los clientes rápidos serán atendidos más rápido y los clientes lentos serán atendidos más despacio.
+
+### Código Modificado para Incluir Tipos de Clientes
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+import random
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            customer_type = random.choice(['Slow', 'Normal', 'Fast'])  # Randomly assign customer type
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+            self.customers_in_queue.append((arrival_time, customer_type))
+            env.process(self.customer_service(env, server, arrival_time, last_service_time, customer_type))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, arrival_time, last_service_time, customer_type):
+        """Customer service process"""
+        with server.request() as req:
+            yield req
+            wait_time = env.now - arrival_time
+            self.wait_times.append(wait_time)
+
+            if customer_type == 'Slow':
+                service_time = np.random.exponential(self.mean_service_time + 1)
+            elif customer_type == 'Fast':
+                service_time = np.random.exponential(self.mean_service_time - 1)
+            else:
+                service_time = np.random.exponential(self.mean_service_time)
+
+            yield env.timeout(service_time)
+            last_service_time[0] = env.now
+            print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
+
+            # Remove customer from the queue tracking list
+            self.customers_in_queue = [(t, c) for t, c in self.customers_in_queue if t != arrival_time]
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, c in self.customers_in_queue:
+                    if t == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer ({c}) left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, c))
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Tipos de Clientes**:
+   * En `customer_arrival`, asignamos aleatoriamente un tipo de cliente (`Slow`, `Normal`, `Fast`) cuando llega un cliente.
+   * En `customer_service`, ajustamos el tiempo de servicio en función del tipo de cliente:
+     * `Slow`: El tiempo de servicio es `self.mean_service_time + 1`.
+     * `Fast`: El tiempo de servicio es `self.mean_service_time - 1`.
+     * `Normal`: El tiempo de servicio es `self.mean_service_time`.
+2. **Monitoreo de la Cola**:
+   * `customers_in_queue` se usa para hacer seguimiento de los tiempos de llegada y tipos de clientes en la cola.
+   * Actualizamos la lista de `customers_in_queue` en `customer_service` y `check_wait_time` para reflejar la entrada y salida de clientes.
+3. **Ajustes en el Proceso de Servicio**:
+   * El proceso de servicio ajusta el tiempo de servicio basado en el tipo de cliente.
+
+Con estas modificaciones, el código ahora maneja diferentes tipos de clientes y ajusta el tiempo de servicio en consecuencia.
+
+Quiero tener la alternativa de q mi cola sea procesada con sjf en lugar de fifo
+
+Para implementar un sistema en el que la cola pueda ser procesada usando la política SJF (Shortest Job First) en lugar de FIFO (First In, First Out), necesitamos modificar la lógica de manejo de la cola en `simpy`. Con SJF, siempre seleccionamos al cliente con el menor tiempo de servicio estimado.
+
+Vamos a añadir una opción para elegir entre FIFO y SJF y ajustar la lógica en consecuencia.
+
+### Código Modificado con Opción para SJF
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+import random
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time, scheduling_policy='FIFO'):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+        self.scheduling_policy = scheduling_policy
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            customer_type = random.choice(['Slow', 'Normal', 'Fast'])  # Randomly assign customer type
+
+            if customer_type == 'Slow':
+                service_time = np.random.exponential(self.mean_service_time + 1)
+            elif customer_type == 'Fast':
+                service_time = np.random.exponential(self.mean_service_time - 1)
+            else:
+                service_time = np.random.exponential(self.mean_service_time)
+
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+
+            self.customers_in_queue.append((arrival_time, service_time, customer_type))
+            env.process(self.customer_service(env, server, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, last_service_time):
+        """Customer service process"""
+        if self.scheduling_policy == 'SJF':
+            self.customers_in_queue.sort(key=lambda x: x[1])  # Sort by service time
+
+        with server.request() as req:
+            yield req
+
+            if self.customers_in_queue:
+                arrival_time, service_time, customer_type = self.customers_in_queue.pop(0)
+                wait_time = env.now - arrival_time
+                self.wait_times.append(wait_time)
+
+                yield env.timeout(service_time)
+                last_service_time[0] = env.now
+                print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, s, c in self.customers_in_queue:
+                    if t == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer ({c}) left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, s, c))
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+    scheduling_policy = 'SJF'  # Change to 'FIFO' for First In First Out
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5,  # Maximum wait time in minutes before a customer leaves
+        scheduling_policy=scheduling_policy  # FIFO or SJF
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Tipos de Clientes y Tiempos de Servicio**:
+   * En `customer_arrival`, asignamos aleatoriamente un tipo de cliente (`Slow`, `Normal`, `Fast`) y calculamos su tiempo de servicio en consecuencia.
+2. **Almacenamiento de Clientes en Cola**:
+   * Los clientes en la cola se almacenan en la lista `customers_in_queue` como tuplas `(arrival_time, service_time, customer_type)`.
+3. **Política de Planificación**:
+   * Se añade el parámetro `scheduling_policy` en la clase `LibrarySimulator` para definir si la política es FIFO o SJF.
+   * En `customer_service`, si la política es SJF, se ordena la lista `customers_in_queue` por tiempo de servicio antes de seleccionar el siguiente cliente para ser atendido.
+4. **Monitoreo de la Cola**:
+   * La lista `customers_in_queue` se actualiza para reflejar la entrada y salida de clientes, asegurando que los tiempos de espera y los abandonos se gestionen correctamente.
+
+Con estas modificaciones, el código puede manejar diferentes tipos de clientes y permitir la selección entre políticas FIFO y SJF para el procesamiento de la cola.
+
+vamos bien, pero cuando hace sjf no le des prioridad por el tiempo precomputado. Simplemente prioriza a los rapidos y en segundo momento a los medios. Entre un conjunto de rapidos atiende por orden de llegada normal
+
+Entendido, vamos a modificar el código para que, cuando se utilice SJF, se dé prioridad primero a los clientes rápidos, luego a los normales y finalmente a los lentos, pero dentro de cada grupo se atienda en orden de llegada.
+
+### Código Modificado para Implementar SJF con Prioridad por Tipo de Cliente
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+import random
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time, scheduling_policy='FIFO'):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+        self.scheduling_policy = scheduling_policy
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            customer_type = random.choice(['Slow', 'Normal', 'Fast'])  # Randomly assign customer type
+
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+
+            self.customers_in_queue.append((arrival_time, customer_type))
+            env.process(self.customer_service(env, server, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, last_service_time):
+        """Customer service process"""
+        if self.scheduling_policy == 'SJF':
+            # Prioritize Fast customers first, then Normal, then Slow
+            self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))  # Sort by type and then by arrival time
+
+        with server.request() as req:
+            yield req
+
+            if self.customers_in_queue:
+                arrival_time, customer_type = self.customers_in_queue.pop(0)
+                wait_time = env.now - arrival_time
+                self.wait_times.append(wait_time)
+
+                if customer_type == 'Slow':
+                    service_time = np.random.exponential(self.mean_service_time + 1)
+                elif customer_type == 'Fast':
+                    service_time = np.random.exponential(self.mean_service_time - 1)
+                else:
+                    service_time = np.random.exponential(self.mean_service_time)
+
+                yield env.timeout(service_time)
+                last_service_time[0] = env.now
+                print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, c in self.customers_in_queue:
+                    if t == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer ({c}) left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, c))
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def main():
+    num_librarians = 2  # Number of librarians
+    scheduling_policy = 'SJF'  # Change to 'FIFO' for First In First Out
+
+    simulator = LibrarySimulator(
+        mean_arrival_rate=8,
+        mean_service_time=5,
+        convergence_threshold=0.01,
+        simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+        num_librarians=num_librarians,
+        max_wait_time=5,  # Maximum wait time in minutes before a customer leaves
+        scheduling_policy=scheduling_policy  # FIFO or SJF
+    )
+
+    all_customers_served = []
+
+    with open('simulation_statistics.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                         'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+        while True:
+            simulator.run_simulation()
+            all_customers_served.append(simulator.total_customers_served)
+            stats = simulator.get_statistics()
+            writer.writerow(stats)
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < simulator.convergence_threshold:
+                    break
+
+    print("Simulation statistics saved to 'simulation_statistics.csv'")
+
+if __name__ == "__main__":
+    main()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Prioridad por Tipo de Cliente en SJF**:
+   * En `customer_service`, si la política es SJF, la lista `customers_in_queue` se ordena de manera que los clientes rápidos (`Fast`) se prioricen primero, seguidos por los normales (`Normal`) y luego los lentos (`Slow`). Dentro de cada grupo, se atienden en orden de llegada.
+2. **Almacenamiento de Clientes en Cola**:
+   * Los clientes en la cola se almacenan en la lista `customers_in_queue` como tuplas `(arrival_time, customer_type)`.
+3. **Ajustes en el Proceso de Servicio**:
+   * El proceso de servicio ajusta el tiempo de servicio basado en el tipo de cliente, similar a la implementación anterior.
+
+Con estas modificaciones, el código ahora puede manejar la política SJF con prioridad por tipo de cliente y atender a los clientes en orden de llegada dentro de cada grupo.
+
+explicame esta linea: self.customers\_in\_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))
+
+Claro, te explico en detalle esa línea de código:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))
+</code></div></div></pre>
+
+### Desglose de la Línea
+
+1. **`self.customers_in_queue.sort(...)`**:
+   * Esta línea llama al método `sort()` de la lista `customers_in_queue` para ordenar los elementos en la lista.
+2. **`key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0])`**:
+   * `key` es un argumento del método `sort()` que especifica una función para extraer una clave de cada elemento de la lista. En este caso, la clave es una tupla generada por una función lambda.
+   * `lambda x: ...` define una función lambda anónima que toma un argumento `x`.
+3. **`x[1] != 'Fast'`**:
+   * `x` representa un elemento de la lista `customers_in_queue`, que es una tupla `(arrival_time, customer_type)`.
+   * `x[1]` es el `customer_type` (por ejemplo, `'Fast'`, `'Normal'`, `'Slow'`).
+   * La expresión `x[1] != 'Fast'` evalúa a `False` si `customer_type` es `'Fast'` y a `True` en cualquier otro caso. Esto coloca a los clientes con tipo `'Fast'` antes en el orden.
+4. **`x[1] != 'Normal'`**:
+   * Similar a lo anterior, esta expresión evalúa a `False` si `customer_type` es `'Normal'` y a `True` en cualquier otro caso.
+   * Esto coloca a los clientes con tipo `'Normal'` después de los `'Fast'`, pero antes que los `'Slow'`.
+5. **`x[0]`**:
+   * `x[0]` es `arrival_time`.
+   * Esto asegura que dentro de cada grupo (rápidos, normales, lentos), los clientes se ordenan por su tiempo de llegada.
+
+### Ejemplo de Ordenamiento
+
+Imaginemos que `self.customers_in_queue` contiene los siguientes elementos:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">self.customers_in_queue = [
+    (2, 'Normal'),
+    (1, 'Fast'),
+    (3, 'Slow'),
+    (4, 'Fast'),
+    (5, 'Normal')
+]
+</code></div></div></pre>
+
+Al aplicar el `sort()` con la clave definida, se ordenarán de la siguiente manera:
+
+1. **Fast (1, 'Fast')**: Primero por tipo 'Fast', luego por tiempo de llegada.
+2. **Fast (4, 'Fast')**: Luego por tipo 'Fast', luego por tiempo de llegada.
+3. **Normal (2, 'Normal')**: Después por tipo 'Normal', luego por tiempo de llegada.
+4. **Normal (5, 'Normal')**: Después por tipo 'Normal', luego por tiempo de llegada.
+5. **Slow (3, 'Slow')**: Finalmente por tipo 'Slow'.
+
+### Resultado Ordenado
+
+El resultado de `self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))` sería:
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">[
+    (1, 'Fast'),
+    (4, 'Fast'),
+    (2, 'Normal'),
+    (5, 'Normal'),
+    (3, 'Slow')
+]
+</code></div></div></pre>
+
+### Conclusión
+
+La clave `(x[1] != 'Fast', x[1] != 'Normal', x[0])` se utiliza para ordenar la lista de clientes de manera que se prioricen primero los clientes rápidos, luego los normales y finalmente los lentos, y dentro de cada grupo se ordenen por el tiempo de llegada.
+
+Perfecto. Ahora quiero q mi script genere 6 csv en lugar de 1 bajo el siguiente criterio: combinaciones posibles entre usar o no sjf y usar entre 1 y 3 bibliotecarios. Ademas de una simulacion a otra puedes variar ligeramente los mean\_arrival\_rate, mean\_service\_time, max\_wait\_time
+
+Para generar seis archivos CSV en lugar de uno, vamos a crear una función `run_simulations` que ejecutará las simulaciones con las combinaciones posibles de los parámetros `scheduling_policy` (FIFO o SJF) y `num_librarians` (1, 2, 3). Además, se variarán ligeramente los parámetros `mean_arrival_rate`, `mean_service_time` y `max_wait_time` en cada simulación.
+
+Aquí está el código modificado para cumplir con estos requisitos:
+
+### Código Modificado
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"></span></div></div></div></pre>
+
+<pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python">import simpy
+import numpy as np
+import csv
+import random
+
+class LibrarySimulator:
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time, scheduling_policy='FIFO'):
+        self.mean_arrival_rate = mean_arrival_rate
+        self.mean_service_time = mean_service_time
+        self.convergence_threshold = convergence_threshold
+        self.simulation_time = simulation_time
+        self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
+        self.scheduling_policy = scheduling_policy
+
+        # Initialize statistics
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+    def customer_arrival(self, env, server, last_service_time):
+        """Customer arrival event generator"""
+        while True:
+            yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
+            customer_type = random.choice(['Slow', 'Normal', 'Fast'])  # Randomly assign customer type
+
+            if server.count == 0 and len(server.queue) == 0:
+                # If all servers are idle and there is no queue, add idle time
+                idle_time = env.now - last_service_time[0]
+                self.idle_times.append(idle_time)
+
+            self.customers_in_queue.append((arrival_time, customer_type))
+            env.process(self.customer_service(env, server, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time, server))
+            self.queue_lengths.append(len(server.queue))
+            self.total_customers_served += 1
+
+    def customer_service(self, env, server, last_service_time):
+        """Customer service process"""
+        if self.scheduling_policy == 'SJF':
+            # Prioritize Fast customers first, then Normal, then Slow
+            self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))  # Sort by type and then by arrival time
+
+        with server.request() as req:
+            yield req
+
+            if self.customers_in_queue:
+                arrival_time, customer_type = self.customers_in_queue.pop(0)
+                wait_time = env.now - arrival_time
+                self.wait_times.append(wait_time)
+
+                if customer_type == 'Slow':
+                    service_time = np.random.exponential(self.mean_service_time + 1)
+                elif customer_type == 'Fast':
+                    service_time = np.random.exponential(self.mean_service_time - 1)
+                else:
+                    service_time = np.random.exponential(self.mean_service_time)
+
+                yield env.timeout(service_time)
+                last_service_time[0] = env.now
+                print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
+
+    def check_wait_time(self, env, arrival_time, server):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, c in self.customers_in_queue:
+                    if t == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer ({c}) left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, c))
+                break
+
+    def run_simulation(self):
+        self.wait_times = []
+        self.idle_times = []
+        self.queue_lengths = []
+        self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
+
+        env = simpy.Environment()
+        server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
+        last_service_time = [0]  # Time when the last server finished serving a customer
+
+        # Start the customer arrival generator
+        env.process(self.customer_arrival(env, server, last_service_time))
+
+        # Run the simulation for a defined time (e.g., 8 hours)
+        env.run(until=self.simulation_time)
+
+    def get_statistics(self):
+        max_wait_time = round(max(self.wait_times), 2) if self.wait_times else 0
+        mean_wait_time = round(np.mean(self.wait_times), 2) if self.wait_times else 0
+
+        max_idle_time = round(max(self.idle_times), 2) if self.idle_times else 0
+        min_idle_time = round(min(self.idle_times), 2) if self.idle_times else 0
+        mean_idle_time = round(np.mean(self.idle_times), 2) if self.idle_times else 0
+
+        max_queue_length = max(self.queue_lengths) if self.queue_lengths else 0
+        mean_queue_length = round(np.mean(self.queue_lengths), 2) if self.queue_lengths else 0
+
+        return [
+            self.total_customers_served,
+            max_wait_time, mean_wait_time,
+            max_idle_time, min_idle_time, mean_idle_time,
+            max_queue_length, mean_queue_length,
+            self.customers_left
+        ]
+
+def run_simulations():
+    scheduling_policies = ['FIFO', 'SJF']
+    num_librarians_options = [1, 2, 3]
+
+    for policy in scheduling_policies:
+        for num_librarians in num_librarians_options:
+            # Vary parameters slightly for each simulation
+            mean_arrival_rate = 8 + np.random.uniform(-1, 1)
+            mean_service_time = 5 + np.random.uniform(-1, 1)
+            max_wait_time = 5 + np.random.uniform(-1, 1)
+
+            simulator = LibrarySimulator(
+                mean_arrival_rate=mean_arrival_rate,
+                mean_service_time=mean_service_time,
+                convergence_threshold=0.01,
+                simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+                num_librarians=num_librarians,
+                max_wait_time=max_wait_time,  # Maximum wait time in minutes before a customer leaves
+                scheduling_policy=policy  # FIFO or SJF
+            )
+
+            all_customers_served = []
+
+            filename = f'simulation_statistics_{policy}_{num_librarians}_librarians.csv'
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
+                                 'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                                 'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+
+                while True:
+                    simulator.run_simulation()
+                    all_customers_served.append(simulator.total_customers_served)
+                    stats = simulator.get_statistics()
+                    writer.writerow(stats)
+
+                    if len(all_customers_served) > 1:
+                        mean_served = np.mean(all_customers_served)
+                        std_dev_served = np.std(all_customers_served, ddof=1)
+                        relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                        if relative_error < simulator.convergence_threshold:
+                            break
+
+            print(f"Simulation statistics saved to '{filename}'")
+
+if __name__ == "__main__":
+    run_simulations()
+</code></div></div></pre>
+
+### Explicación de los Cambios
+
+1. **Función `run_simulations`**:
+   * Define las combinaciones posibles de `scheduling_policy` (FIFO y SJF) y `num_librarians` (1, 2, 3).
+   * Varía ligeramente los parámetros `mean_arrival_rate`, `mean_service_time` y `max_wait_time` para cada simulación usando `np.random.uniform(-1, 1)`.
+2. **Ejecución y Almacenamiento de Resultados**:
+   * Para cada combinación, crea una instancia de `LibrarySimulator` con los parámetros ligeramente variados.
+   * Ejecuta las simulaciones hasta que se cumpla el criterio de convergencia.
+   * Guarda los resultados en un archivo CSV con un nombre que refleja la combinación de parámetros (`scheduling_policy` y `num_librarians`).
+
+Con estas modificaciones, el script generará seis archivos CSV, uno para cada combinación de política de planificación y número de bibliotecarios, con parámetros ligeramente variados para cada simulación.
+
+ChatGPT puede cometer errores. Considera verificar la información importante.
