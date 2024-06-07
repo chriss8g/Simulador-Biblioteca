@@ -3,28 +3,34 @@ import numpy as np
 import csv
 
 class LibrarySimulator:
-    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians):
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
         self.mean_arrival_rate = mean_arrival_rate
         self.mean_service_time = mean_service_time
         self.convergence_threshold = convergence_threshold
         self.simulation_time = simulation_time
         self.num_librarians = num_librarians
+        self.max_wait_time = max_wait_time
 
         # Initialize statistics
         self.wait_times = []
         self.idle_times = []
         self.queue_lengths = []
         self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
 
     def customer_arrival(self, env, server, last_service_time):
         """Customer arrival event generator"""
         while True:
             yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
+            arrival_time = env.now
             if server.count == 0 and len(server.queue) == 0:
                 # If all servers are idle and there is no queue, add idle time
                 idle_time = env.now - last_service_time[0]
                 self.idle_times.append(idle_time)
-            env.process(self.customer_service(env, server, env.now, last_service_time))
+            self.customers_in_queue.append((env.now, arrival_time))
+            env.process(self.customer_service(env, server, arrival_time, last_service_time))
+            env.process(self.check_wait_time(env, arrival_time))
             self.queue_lengths.append(len(server.queue))
             self.total_customers_served += 1
 
@@ -39,11 +45,29 @@ class LibrarySimulator:
             last_service_time[0] = env.now
             print(f"Customer served at {env.now:.2f} minutes")
 
+            # Remove customer from the queue tracking list
+            self.customers_in_queue = [(t, a) for t, a in self.customers_in_queue if a != arrival_time]
+
+    def check_wait_time(self, env, arrival_time):
+        """Check if a customer leaves after waiting too long"""
+        while True:
+            yield env.timeout(1)  # Check every minute
+            if env.now - arrival_time > self.max_wait_time:
+                for t, a in self.customers_in_queue:
+                    if a == arrival_time:
+                        self.customers_left += 1
+                        print(f"Customer left at {env.now:.2f} minutes after waiting too long")
+                        # Remove the customer from the queue
+                        self.customers_in_queue.remove((t, a))
+                break
+
     def run_simulation(self):
         self.wait_times = []
         self.idle_times = []
         self.queue_lengths = []
         self.total_customers_served = 0
+        self.customers_left = 0
+        self.customers_in_queue = []
 
         env = simpy.Environment()
         server = simpy.Resource(env, capacity=self.num_librarians)  # Multiple servers at the desk
@@ -70,7 +94,8 @@ class LibrarySimulator:
             self.total_customers_served,
             max_wait_time, mean_wait_time,
             max_idle_time, min_idle_time, mean_idle_time,
-            max_queue_length, mean_queue_length
+            max_queue_length, mean_queue_length,
+            self.customers_left
         ]
 
 def main():
@@ -81,7 +106,8 @@ def main():
         mean_service_time=5,
         convergence_threshold=0.01,
         simulation_time=8 * 60,  # in minutes, e.g., 8 hours
-        num_librarians=num_librarians
+        num_librarians=num_librarians,
+        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
     )
 
     all_customers_served = []
@@ -90,7 +116,7 @@ def main():
         writer = csv.writer(file)
         writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
                          'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
-                         'Max Queue Length', 'Mean Queue Length'])
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
 
         while True:
             simulator.run_simulation()
