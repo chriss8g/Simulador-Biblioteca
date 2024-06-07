@@ -5,20 +5,20 @@ import csv
 # System parameters
 MEAN_ARRIVAL_RATE = 8  # mean arrivals per hour
 MEAN_SERVICE_TIME = 5  # mean service time in minutes
-
-# Convert mean arrival rate to inter-arrival time (in minutes)
-inter_arrival_time = 60 / MEAN_ARRIVAL_RATE
+CONVERGENCE_THRESHOLD = 0.01  # Convergence threshold for stopping criterion
+SIMULATION_TIME = 8 * 60  # in minutes, e.g., 8 hours
 
 def customer_arrival(env, server, queue, last_service_time):
     """Customer arrival event generator"""
     global total_customers_served
     while True:
-        yield env.timeout(np.random.exponential(inter_arrival_time))
+        yield env.timeout(np.random.exponential(60 / MEAN_ARRIVAL_RATE))
         if server.count == 0 and len(server.queue) == 0:
             # If the server is idle and there is no queue, add idle time
             idle_time = env.now - last_service_time[0]
             idle_times.append(idle_time)
         env.process(customer_service(env, server, env.now, queue, last_service_time))
+        queue_lengths.append(len(server.queue))
         total_customers_served += 1
 
 def customer_service(env, server, arrival_time, queue, last_service_time):
@@ -33,7 +33,7 @@ def customer_service(env, server, arrival_time, queue, last_service_time):
         last_service_time[0] = env.now
         print(f"Customer served at {env.now:.2f} minutes")
 
-def run_simulation(simulation_time):
+def run_simulation():
     global wait_times, idle_times, queue_lengths, total_customers_served
     wait_times = []
     idle_times = []
@@ -49,11 +49,10 @@ def run_simulation(simulation_time):
     env.process(customer_arrival(env, server, queue, last_service_time))
 
     # Run the simulation for a defined time (e.g., 8 hours)
-    env.run(until=simulation_time)
+    env.run(until=SIMULATION_TIME)
 
 def main():
-    simulation_time = 8 * 60  # in minutes
-    num_simulations = 10
+    all_customers_served = []
 
     with open('simulation_statistics.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
@@ -61,8 +60,9 @@ def main():
                          'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
                          'Max Queue Length', 'Mean Queue Length'])
 
-        for _ in range(num_simulations):
-            run_simulation(simulation_time)
+        while True:
+            run_simulation()
+            all_customers_served.append(total_customers_served)
 
             max_wait_time = round(max(wait_times), 2) if wait_times else 0
             min_wait_time = round(min(wait_times), 2) if wait_times else 0
@@ -81,6 +81,13 @@ def main():
                 max_idle_time, min_idle_time, mean_idle_time,
                 max_queue_length, mean_queue_length
             ])
+
+            if len(all_customers_served) > 1:
+                mean_served = np.mean(all_customers_served)
+                std_dev_served = np.std(all_customers_served, ddof=1)
+                relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
+                if relative_error < CONVERGENCE_THRESHOLD:
+                    break
 
     print("Simulation statistics saved to 'simulation_statistics.csv'")
 
