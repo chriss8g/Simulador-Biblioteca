@@ -4,13 +4,14 @@ import csv
 import random
 
 class LibrarySimulator:
-    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time):
+    def __init__(self, mean_arrival_rate, mean_service_time, convergence_threshold, simulation_time, num_librarians, max_wait_time, scheduling_policy='FIFO'):
         self.mean_arrival_rate = mean_arrival_rate
         self.mean_service_time = mean_service_time
         self.convergence_threshold = convergence_threshold
         self.simulation_time = simulation_time
         self.num_librarians = num_librarians
         self.max_wait_time = max_wait_time
+        self.scheduling_policy = scheduling_policy
 
         # Initialize statistics
         self.wait_times = []
@@ -26,36 +27,42 @@ class LibrarySimulator:
             yield env.timeout(np.random.exponential(60 / self.mean_arrival_rate))
             arrival_time = env.now
             customer_type = random.choice(['Slow', 'Normal', 'Fast'])  # Randomly assign customer type
+
             if server.count == 0 and len(server.queue) == 0:
                 # If all servers are idle and there is no queue, add idle time
                 idle_time = env.now - last_service_time[0]
                 self.idle_times.append(idle_time)
+
             self.customers_in_queue.append((arrival_time, customer_type))
-            env.process(self.customer_service(env, server, arrival_time, last_service_time, customer_type))
+            env.process(self.customer_service(env, server, last_service_time))
             env.process(self.check_wait_time(env, arrival_time, server))
             self.queue_lengths.append(len(server.queue))
             self.total_customers_served += 1
 
-    def customer_service(self, env, server, arrival_time, last_service_time, customer_type):
+    def customer_service(self, env, server, last_service_time):
         """Customer service process"""
+        if self.scheduling_policy == 'SJF':
+            # Prioritize Fast customers first, then Normal, then Slow
+            self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))  # Sort by type and then by arrival time
+
         with server.request() as req:
             yield req
-            wait_time = env.now - arrival_time
-            self.wait_times.append(wait_time)
 
-            if customer_type == 'Slow':
-                service_time = np.random.exponential(self.mean_service_time + 1)
-            elif customer_type == 'Fast':
-                service_time = np.random.exponential(self.mean_service_time - 1)
-            else:
-                service_time = np.random.exponential(self.mean_service_time)
+            if self.customers_in_queue:
+                arrival_time, customer_type = self.customers_in_queue.pop(0)
+                wait_time = env.now - arrival_time
+                self.wait_times.append(wait_time)
 
-            yield env.timeout(service_time)
-            last_service_time[0] = env.now
-            print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
+                if customer_type == 'Slow':
+                    service_time = np.random.exponential(self.mean_service_time + 1)
+                elif customer_type == 'Fast':
+                    service_time = np.random.exponential(self.mean_service_time - 1)
+                else:
+                    service_time = np.random.exponential(self.mean_service_time)
 
-            # Remove customer from the queue tracking list
-            self.customers_in_queue = [(t, c) for t, c in self.customers_in_queue if t != arrival_time]
+                yield env.timeout(service_time)
+                last_service_time[0] = env.now
+                print(f"Customer ({customer_type}) served at {env.now:.2f} minutes")
 
     def check_wait_time(self, env, arrival_time, server):
         """Check if a customer leaves after waiting too long"""
@@ -109,6 +116,7 @@ class LibrarySimulator:
 
 def main():
     num_librarians = 2  # Number of librarians
+    scheduling_policy = 'SJF'  # Change to 'FIFO' for First In First Out
 
     simulator = LibrarySimulator(
         mean_arrival_rate=8,
@@ -116,7 +124,8 @@ def main():
         convergence_threshold=0.01,
         simulation_time=8 * 60,  # in minutes, e.g., 8 hours
         num_librarians=num_librarians,
-        max_wait_time=5  # Maximum wait time in minutes before a customer leaves
+        max_wait_time=5,  # Maximum wait time in minutes before a customer leaves
+        scheduling_policy=scheduling_policy  # FIFO or SJF
     )
 
     all_customers_served = []
