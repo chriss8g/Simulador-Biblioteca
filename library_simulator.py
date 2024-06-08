@@ -54,9 +54,9 @@ class LibrarySimulator:
                 self.wait_times.append(wait_time)
 
                 if customer_type == 'Slow':
-                    service_time = np.random.exponential(self.mean_service_time + 1)
+                    service_time = np.random.exponential(self.mean_service_time + 3)
                 elif customer_type == 'Fast':
-                    service_time = np.random.exponential(self.mean_service_time - 1)
+                    service_time = np.random.exponential(self.mean_service_time - 3)
                 else:
                     service_time = np.random.exponential(self.mean_service_time)
 
@@ -75,6 +75,7 @@ class LibrarySimulator:
                         print(f"Customer ({c}) left at {env.now:.2f} minutes after waiting too long")
                         # Remove the customer from the queue
                         self.customers_in_queue.remove((t, c))
+                self.wait_times.append(self.max_wait_time)
                 break
 
     def run_simulation(self):
@@ -118,46 +119,52 @@ def run_simulations():
     scheduling_policies = ['FIFO', 'SJF']
     num_librarians_options = [1, 2, 3]
 
-    for policy in scheduling_policies:
-        for num_librarians in num_librarians_options:
-            # Vary parameters slightly for each simulation
-            mean_arrival_rate = 8 + np.random.uniform(-1, 1)
-            mean_service_time = 5 + np.random.uniform(-1, 1)
-            max_wait_time = 5 + np.random.uniform(-1, 1)
+    # Abrir el archivo CSV una sola vez para escribir todos los datos
+    filename = 'all_simulations_statistics.csv'
+    with open(filename, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Policy', 'Num Librarians', 'Total Customers Served', 'Max Wait Time', 
+                         'Mean Wait Time', 'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
+                         'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
 
-            simulator = LibrarySimulator(
-                mean_arrival_rate=mean_arrival_rate,
-                mean_service_time=mean_service_time,
-                convergence_threshold=0.01,
-                simulation_time=8 * 60,  # in minutes, e.g., 8 hours
-                num_librarians=num_librarians,
-                max_wait_time=max_wait_time,  # Maximum wait time in minutes before a customer leaves
-                scheduling_policy=policy  # FIFO or SJF
-            )
+        for policy in scheduling_policies:
+            for num_librarians in num_librarians_options:
+                # Vary parameters slightly for each simulation
+                mean_arrival_rate = 8 + np.random.uniform(-1, 1)
+                mean_service_time = 5
+                max_wait_time = 10 + np.random.uniform(-2, 2)
 
-            all_customers_served = []
+                simulator = LibrarySimulator(
+                    mean_arrival_rate=mean_arrival_rate,
+                    mean_service_time=mean_service_time,
+                    convergence_threshold=0.01,
+                    simulation_time=8 * 60,  # in minutes, e.g., 8 hours
+                    num_librarians=num_librarians,
+                    max_wait_time=max_wait_time,  # Maximum wait time in minutes before a customer leaves
+                    scheduling_policy=policy  # FIFO or SJF
+                )
 
-            filename = f'simulation_statistics_{policy}_{num_librarians}_librarians.csv'
-            with open(filename, mode='w', newline='') as file:
-                writer = csv.writer(file)
-                writer.writerow(['Total Customers Served', 'Max Wait Time', 'Mean Wait Time', 
-                                 'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
-                                 'Max Queue Length', 'Mean Queue Length', 'Customers Left'])
+                all_customers_served = []
 
+                cont = 0
                 while True:
+                    cont += 1
                     simulator.run_simulation()
                     all_customers_served.append(simulator.total_customers_served)
                     stats = simulator.get_statistics()
-                    writer.writerow(stats)
+
+                    # Agregar datos de la política y el número de bibliotecarios a las estadísticas
+                    stats_with_policy_librarians = [policy, num_librarians] + stats
+                    writer.writerow(stats_with_policy_librarians)
 
                     if len(all_customers_served) > 1:
                         mean_served = np.mean(all_customers_served)
                         std_dev_served = np.std(all_customers_served, ddof=1)
                         relative_error = std_dev_served / np.sqrt(len(all_customers_served)) / mean_served
-                        if relative_error < simulator.convergence_threshold:
+                        if relative_error < simulator.convergence_threshold and cont > 100:
                             break
 
-            print(f"Simulation statistics saved to '{filename}'")
+    print(f"All simulation statistics saved to '{filename}'")
 
 if __name__ == "__main__":
     run_simulations()
