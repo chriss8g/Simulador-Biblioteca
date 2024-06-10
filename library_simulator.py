@@ -122,7 +122,6 @@ def run_simulations():
     scheduling_policies = [False, True]
     num_librarians_options = [1, 2, 3, 4, 5]
 
-    # Abrir el archivo CSV una sola vez para escribir todos los datos
     filename = 'all_simulations_statistics.csv'
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file)
@@ -130,9 +129,6 @@ def run_simulations():
                          'Mean Wait Time', 'Max Idle Time', 'Min Idle Time', 'Mean Idle Time', 
                          'Max Queue Length', 'Mean Queue Length', 'Customers Left', 'Customers Arrived'])
 
-        # for policy in scheduling_policies:
-        #     for num_librarians in num_librarians_options:
-                # Vary parameters slightly for each simulation
         mean_arrival_rate = 15
         mean_service_time = 3
         max_wait_time = 6 + np.random.uniform(-2, 2)
@@ -159,8 +155,7 @@ def run_simulations():
             simulator.run_simulation()
             all_customers_arrived.append(simulator.total_customers_arrived)
             stats = simulator.get_statistics()
-
-            # Agregar datos de la política y el número de bibliotecarios a las estadísticas
+        
             stats_with_policy_librarians = [scheduling_policy, num_librarians] + stats
             writer.writerow(stats_with_policy_librarians)
 
