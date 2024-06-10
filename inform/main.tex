@@ -47,7 +47,7 @@
 	\begin{@twocolumnfalse}
 		\maketitle
 		\begin{abstract}
-			Este estudio analiza a partir de una simulación el rendimiento de una biblioteca en la que se evalúan diferentes políticas de atención, incluyendo la política SJF (Shortest Job First). El objetivo es entender cómo estas políticas impactan en varios indicadores de rendimiento, tales como el tamaño de la cola, el tiempo de espera, y el número de clientes atendidos.
+			Este estudio analiza, a partir de simulaciones, el rendimiento de una biblioteca en la que se evalúan las políticas de atención SJF (Shortest Job First) y FIFO(First In First Out), y se varía el número de bibliotecarios. El objetivo es entender cómo estas políticas impactan en varios indicadores de rendimiento, tales como el tamaño de la cola, el tiempo de espera, y el número de clientes atendidos.
 		\end{abstract}
 		\vspace{1cm}
 	\end{@twocolumnfalse}
@@ -70,19 +70,23 @@ En este análisis, efectuamos simulaciones del funcionamiento de la biblioteca y
 Nuestra investigación busca comprender cómo diferentes políticas de atención, como la política Shortest Job First (SJF), afectan el rendimiento de la biblioteca en términos de tiempo de espera, tamaño de la cola, número de usuarios atendidos y que se retiran de la biblioteca sin ser atendidos. Mediante el análisis estadístico de los datos recogidos durante la simulación, buscamos identificar patrones y tendencias que puedan guiar la implementación de estrategias más efectivas para minimizar los tiempos de espera y maximizar la satisfacción de los clientes.
 
 \subsection{El sistema específico a simular y las variables de interés}
-El sistema a simular será el funcionamiento de la biblioteca en un período de tiempo. De los resultados de las simulaciones, además de su relación con las variables del problema nos interesan los siguientes datos:
+El sistema a simular será el funcionamiento de la biblioteca en un período de tiempo(8 horas). De los resultados de las simulaciones, además de su relación con las variables del problema nos interesan los siguientes datos:
 \begin{itemize}
-	\item Tamaño máximo y promedio de la cola (\texttt{max\_size\_queue}, \texttt{ave\_size\_queue})
-	\item Total de clientes atendidos (\texttt{total\_clients\_attended})
+	\item Total de clientes atendidos
+	\item Tiempo de espera máximo y promedio en la cola
+	\item Tamaño máximo y promedio de la cola
+	\item Total de clientes que se retiran sin ser atendidos
 \end{itemize}
 
 \subsection{Variables que describen el problema}
 El problema es descrito por las siguientes variables:
 \begin{itemize}
-	\item Distribución promedio de clientes y estudiantes (\texttt{ave\_clients\_dist}, \texttt{ave\_student\_dist})
-	\item Tiempo promedio de espera y atención (\texttt{ave\_wait\_time}, \texttt{ave\_attention\_time})
-	\item Número de bibliotecas involucradas en la simulación (\texttt{libraries\_count})
-	\item Indicador de si se usó la política SJF (\texttt{sjf})
+	\item Distribución de llegada de los clientes
+	\item Distribución del tiempo que tardan en atender los bibliotecarios
+	\item Tiempo promedio de espera y atención
+	\item Número de bibliotecas involucradas en la simulación
+	\item Indicador de si se usó la política SJF(en caso contrario se usa FIFO)
+	\item Tiempo que esperan los clientes en la cola antes de retirarse
 \end{itemize}
 
 
@@ -98,26 +102,16 @@ El problema es descrito por las siguientes variables:
 
 \subsection{Pasos seguidos para la implementación}
 % Metodología, Algoritmo de simulación, Configuración del entorno, Validación del modelo
-La implementación consta de dos partes. Primeramente se simula el funcionamiento de la biblioteca y la interacción entre las entidades que participan (en este caso los clientes y estudiantes que los atienden). Luego como resultado de las simulaciones se tienen almacenados un conjunto de datos, los cuales son utilizados en un análisis estadístico para hallar si existe correlación entre algunas variables.
+La implementación consta de dos partes. Primeramente se simulan varias jornadas del funcionamiento de la biblioteca y la interacción entre las entidades que participan. Luego como resultado de las simulaciones se tienen almacenados un conjunto de datos, los cuales son utilizados en un análisis estadístico.
 
 \subsection{Descripción de la Simulación}
-La simulación modela el funcionamiento de una biblioteca en la que los clientes llegan de manera aleatoria siguiendo una distribución con una media específica y esperan ser atendidos por estudiantes que atienden a cada cliente de forma aleatoria siguiendo otra distribución con una media. Se registran varias métricas clave durante la ejecución de la simulación, como son ciertos datos relacionados con la cola de espera de los clientes (tamaño y tiempo de espera), las cuales se analizan para evaluar el desempeño bajo diferentes condiciones.
+La simulación modela el funcionamiento de una biblioteca en la que los clientes llegan con una distribución de Poisson al mostrador, con una media de 10 (representa la cantidad media de clientes por hora) y esperan ser atendidos por bibliotecarios. La cantidad de bibliotecarios varía entre 1, 2 y 3 en las diferentes simulaciones. La política de atención puede variar entre FIFO y SJF entre una simulación y otra. Los servicios requeridos por los clientes se clasifican en rápidos, normales y lentos. Los bibliotecarios atienden a cada cliente de servicio rápido con una distribución exponencial de media 2. A los clientes con servicios normales y lentos se le calcula su tiempo de atención como a los rápidos pero una vez determinado este se le suma 3 y 6 minutos respectivamente.
+Se registran varias métricas clave durante la ejecución de la simulación, como son ciertos datos relacionados con la cola de espera de los clientes (tamaño y tiempo de espera), la cantidad de clientes atendidos y la cantidad que se retiran sin ser atendidos. Estas se analizan para evaluar el desempeño bajo las diferentes políticas.
 
-\subsection{Datos Recolectados}
-Los datos recolectados incluyen:
-\begin{itemize}
-	\item Promedio de los tiempos de llegada de clientes y la atención a cada uno por parte de los estudiantes (\texttt{ave\_clients\_dist}, \texttt{ave\_student\_dist})
-	\item Tamaño máximo y promedio de la cola (\texttt{max\_size\_queue}, \texttt{ave\_size\_queue})
-	\item Tiempo promedio de espera y atención (\texttt{ave\_wait\_time}, \texttt{ave\_attention\_time})
-	\item Total de clientes atendidos (\texttt{total\_clients\_attended})
-	\item Número de bibliotecas involucradas en la simulación (\texttt{libraries\_count})
-	\item Indicador de si se usó la política SJF (\texttt{sjf})
-\end{itemize}
-
+{\color{gray}
 \subsection{Métodos de Análisis Estadístico}
 Se realizaron análisis descriptivos de los datos tales como: la prueba de T-Student, ANOVA y Spearman para entender la distribución de las diferentes métricas. Una de los aspectos a analizar fue comparar los resultados entre simulaciones que usaron la política SJF y las que no la usaron para evaluar el impacto de esta política en el rendimiento de la biblioteca.
-
-
+}
 
 
 
@@ -127,8 +121,9 @@ Se realizaron análisis descriptivos de los datos tales como: la prueba de T-Stu
 
 \section{Resultados y Experimentos}
 \subsection{Hallazgos de la simulación}
-A lo largo de la simulación monitoreamos varias métricas clave como son: políticas de manejo de colas y cantidad de estudiantes trabajando en la biblioteca. Como resultado de ello ahora contamos con un dataset que contiene datos de observaciones en distintos períodos de tiempo. La simulación exploró además distinta frecuencia promedio de llegada de clientes y de atención por parte de los bibliotecarios para valorar distintos escenarios del problema en cuestión.
+A lo largo de la simulación monitoreamos varias métricas clave como son: políticas de manejo de colas y cantidad de estudiantes trabajando en la biblioteca. Como resultado de ello ahora contamos con un dataset que contiene datos de observaciones en distintas jornadas de trabajo. La simulación exploró además distintos tiempos antes de que un cliente se retirase sin ser atendido para así valorar distintos escenarios del problema en cuestión.
 
+{\color{gray}
 \subsection{Interpretación de los resultados}
 Los resultados de la simulación ofrecen una visión valiosa sobre el rendimiento de la biblioteca bajo diferentes condiciones. Analizando las estadísticas descriptivas presentadas en la Tabla \ref{tab:descriptive_stats}, podemos inferir varios puntos clave:
 
@@ -143,25 +138,23 @@ Los resultados de la simulación ofrecen una visión valiosa sobre el rendimient
 Es importante considerar que la variabilidad en los resultados (reflejada por la desviación estándar en \textbf{Tabla 1}) indica que existen factores externos o condiciones específicas de la simulación que pueden influir en dichos resultados.
 
 \subsection{Hipótesis extraídas de los resultados}
-Como hemos visto, hay variabilidad en los datos resultantes de las simulaciones, por lo que, nuestras pruebas de hipótesis irán enfocadas en buscar esas causas de la variabilidad y encontrar un patrón o alguna invariante.
-
-\vspace{1cm}
-Lo primero que queremos averiguar es si existe alguna relación entre utilizar o no la política de manejo de colas SJF y el tiempo de espera promedio de los clientes en estas.
+Como puede observarse en los BoxPLot parece haber cierta relación entre la aplicación de la política SJF y la mejora la media de tiempo de espera de los clientes (cita), esta es una de las hipótesis que se pueden extraer de los datos.
+Otra hipótesis sería la posibilidad de que el añadir un quinto bibliotecario no afecte en sentido general a las métricas analizadas.
 
 \subsection{Experimentos realizados para validar las hipótesis}
-Para verificar la primera hipótesis fue utilizada la prueba de \textbf{T de Student}, mediante la cual comparamos las medias de la variable continua \texttt{ave\_wait\_time} entre los dos grupos definidos por la variable booleana que indica si se utilizó o no la política SJF.
+Para el análisis de la primera hipótesis se realizo un análisis de la correlación de las variables de salida con respecto a la aplicación de la política SJF (adjuntar foto). Como puede observarse la aplicación de esta política no tiene correlaciones significativas con ninguna de las variables de salida, lo cual entra en contradicción con lo que se observa en el BoxPlot. \\
+Para comprobar la relación entre las variables SJF y Mean Wait Time se utilizó una prueba  Mann-Whitney U la cual es una alternativa a la prueba t de Student cuando no se cumplen los supuestos de normalidad. La misma arrojó los resultados siguientes:\\
+MannwhitneyuResult(statistic=1248.0, pvalue=0.8624062624558004) (codigo)\\
+El valor p es 0.8624, que es mucho mayor que 0.05. Esto indica que no hay suficiente evidencia para rechazar la hipótesis nula. En otras palabras, no hay una diferencia significativa en el tiempo medio de espera (Mean Wait Time) entre las configuraciones de "SJF=True" y "SJF=False".\\
+\\
+El BoxPlot indica que al añadir un quinto bibliotecario los datos tienen un comportamiento similar al que tenian con 4. Esto significa que solo representaría un costo adicional a la biblioteca y objetivamente no es necesario. Para validar esta hipótesis se realizó una prueba t de Student (ya que se pudo verificar que se cumplian los supuestos de la misma) para comprobar si existe una diferencia significativa en la cantidad de clientes atendidos en las configuraciones de 4 y 5 bibliotecarios (también se realiza un análisis similar para la variable tiempo medio de espera)\\
+Los resultados son:\\
+(Cantidad de clientes atendidos) T-test Result: TtestResult(statistic=1.56677385807371, pvalue=0.12417347029059797, df=45.0)\\
+(Tiempo medio de espera) T-test Result: TtestResult(statistic=-0.748423343123664, pvalue=0.45809885435813613, df=45.0)\\
+En ambos casos el pvalue es mayor que 0.05 por lo cual podemos concluir que no existe diferencia significativa en estas metricas en los grupos de datos de 4 y 5 bibliotecarios, por lo cual podemos concluir que la adición de un quinto bibliotecario no mejora significativamente el servicio en la biblioteca y por lo tanto no es necesario.
 
-\subsection{Necesidad de realizar el análisis estadístico de la simulación}
-El análisis estadístico de los datos recopilados a través de la simulación es fundamental para comprender completamente el comportamiento del sistema estudiado. En el contexto de nuestra simulación de una biblioteca, el análisis estadístico nos permite:
 
-\begin{itemize}
-	\item Identificar tendencias y patrones en los datos que no serían evidentes a simple vista como detectar periodos de alta demanda.
-	\item Evaluar la efectividad de diferentes políticas de atención, como la política Shortest Job First (SJF), comparando sus impactos en métricas clave como el tiempo de espera, el tamaño de la cola y el número de clientes atendidos.
-	\item Determinar la variabilidad en los resultados y su posible origen. Esto es crucial para entender qué factores pueden estar fuera de nuestro control y afectar el rendimiento de la biblioteca.
-	\item Hacer inferencias sobre poblaciones más amplias basándonos en nuestros datos de muestra. Por ejemplo, si nuestros resultados muestran que la política SJF reduce significativamente el tiempo de espera, podemos inferir que esta política podría ser beneficioso en otras bibliotecas con características similares.
-\end{itemize}
 
-Además, el análisis estadístico nos ayuda a formular preguntas precisas para futuras investigaciones y a diseñar experimentos más efectivos. Por ejemplo, si encontramos que la política SJF mejora el tiempo de espera pero aumenta el tamaño de la cola, podríamos preguntarnos si hay formas de equilibrar ambos factores o si deberíamos considerar políticas mixtas.
 
 \subsection{Análisis de Parada de la Simulación}
 La elección del momento exacto para detener una simulación es crítica, ya que puede influir significativamente en los resultados obtenidos. En nuestro estudio, adoptamos un enfoque sistemático para determinar el criterio de parada, basándonos en consideraciones tanto prácticas como metodológicas.
@@ -180,15 +173,7 @@ La selección de estos criterios se fundamenta en la necesidad de obtener result
 
 \subsubsection{Implicaciones para el Análisis}
 La elección cuidadosa de los criterios de parada tiene implicaciones directas para el análisis posterior de los resultados. Al detener la simulación en un punto donde las métricas clave han alcanzado un estado estacionario, nos aseguramos de que los hallazgos sean robustos y generalizables. Además, al considerar el tiempo de simulación y el número máximo de iteraciones, mantenemos un equilibrio entre la profundidad del análisis y la viabilidad operativa de la simulación.
-
-\subsection{Análisis Descriptivo de los Datos}
-Los datos recolectados se resumen en la Tabla \ref{tab:descriptive_stats} \\
-
-Esta tabla muestra las estadísticas descriptivas de las métricas clave de la simulación. La media y la desviación estándar proporcionan una idea del comportamiento general, mientras que los valores mínimos y máximos indican la variabilidad en los resultados.
-
-
-
-
+}
 
 % ************************************************************
 % ******************* CAPITULO 4 ***************************
@@ -196,38 +181,50 @@ Esta tabla muestra las estadísticas descriptivas de las métricas clave de la s
 
 
 \section{Modelo Matemático}
-Los resultados muestran que el tamaño máximo y promedio de la cola varían significativamente entre las simulaciones. El tiempo promedio de espera también presenta una alta variabilidad, lo que sugiere que las condiciones específicas de cada simulación influyen en gran medida en el rendimiento. Comparar estos resultados entre simulaciones con y sin la política SJF puede proporcionar información valiosa sobre la efectividad de dicha política.
-\subsection{Descripción del modelo de cómo modelos probabilísticos}
-% Modelo matemático y ecuaciones
-\subsection{Supuestos y restricciones}
-% Supuestos y restricciones
-\subsection{Comparación de los resultados obtenidos con los resultados experimentales}
-% Resultados experimentales y análisis comparativo
 
-\subsection{Conclusiones}
+\subsection{Descripción del modelo}
+
+El sistema de cuatro bilbiotecarios con política FIFO se basa en un modelo matemático de un sistema de colas con cuatro servidores en paralelo. En este sistema, los clientes llegan siguiendo un proceso de Poisson con una tasa de llegada $\lambda$, y los tiempos de servicio son variables aleatorias exponenciales con tasa $\mu$. Los servidores operan en paralelo, lo que significa que pueden atender a varios clientes simultáneamente.
+
+Este tipo de sistema es conocido como un modelo $M/M/4$ en la teoría de colas, donde:
+
+\begin{itemize}
+	\item $M$ denota que los tiempos entre llegadas siguen una distribución de Poisson.
+	\item $M$ denota que los tiempos de servicio siguen una distribución exponencial.
+	\item 4 indica que hay cuatro servidores en paralelo.
+\end{itemize}
+
+El objetivo del modelo es analizar el tiempo promedio de espera en la cola, la probabilidad de que un cliente tenga que esperar para ser atendido, y la utilización de los servidores.
+
+\subsection{Supuestos y restricciones}
+
+El modelo $M/M/4$,se basa en los siguientes supuestos y restricciones:
+
+\begin{enumerate}
+	\item \textbf{Proceso de Llegada}: Los clientes llegan de acuerdo a un proceso de Poisson con tasa $\lambda$. Esto implica que las llegadas son independientes y el tiempo entre llegadas sigue una distribución exponencial.
+	\item \textbf{Tiempo de Servicio}: Los tiempos de servicio de los servidores son variables aleatorias exponenciales con tasa $\mu$. Esto asegura que la duración del servicio es independiente del tiempo transcurrido.
+	\item \textbf{Capacidad de la Cola}: Se asume que la cola tiene capacidad infinita, es decir, no hay límite en el número de clientes que pueden esperar en la cola.
+	\item \textbf{Disciplina de la Cola}: Los clientes son atendidos en el orden de llegada (FIFO - First In, First Out).
+	\item \textbf{Independencia}: Se asume que los tiempos de llegada y servicio son independientes entre sí y no varían con el tiempo.
+	\item \textbf{Servidores Idénticos}: Los dos servidores son idénticos en términos de capacidad y eficiencia, es decir, ambos tienen la misma tasa de servicio $\mu$.
+\end{enumerate}
+
+\subsection{Comparación de los resultados obtenidos}
+
+Para evaluar la efectividad del modelo, se comparan los resultados obtenidos de las simulaciones con los resultados teóricos esperados del modelo $M/M/4$. Los principales indicadores a considerar incluyen:
+
+\begin{itemize}
+	\item {Tiempo Promedio de Espera}
+	\item {Probabilidad de Espera}
+	\item {Utilización de los Servidores}
+\end{itemize}
+
+Los resultados de la simulación deben mostrar una buena correspondencia con los valores teóricos, validando así el modelo utilizado. Cualquier discrepancia significativa puede indicar la necesidad de revisar los supuestos del modelo o la implementación de la simulación.
+
+\color{gray}
+\section{Conclusiones}
 En resumen, este estudio proporciona una visión detallada del rendimiento de una biblioteca bajo diferentes políticas de atención. Los resultados indican que la política SJF puede tener un impacto significativo en la eficiencia operativa de la biblioteca, reduciendo potencialmente los tiempos de espera y mejorando la experiencia del cliente. Futuros investigaciones podrían explorar más a fondo las condiciones óptimas para implementar esta política y otras estrategias de gestión de colas.
 
-
-
-\begin{table*}[h!]
-	\centering
-	\begin{tabular}{lrrrr}
-		\hline
-		\textbf{Métrica}                  & \textbf{Media} & \textbf{Desviación Estándar} & \textbf{Mínimo} & \textbf{Máximo} \\
-		\hline
-		\texttt{ave\_clients\_dist}       & 1.021          & 0.304                        & 0.504           & 1.499           \\
-		\texttt{ave\_student\_dist}       & 3.049          & 0.795                        & 1.059           & 4.941           \\
-		\texttt{max\_size\_queue}         & 10.624         & 11.753                       & 0.000           & 58.000          \\
-		\texttt{ave\_size\_queue}         & 4.900          & 6.511                        & 0.000           & 35.714          \\
-		\texttt{ave\_wait\_time}          & 3.412          & 4.079                        & 0.002           & 17.869          \\
-		\texttt{ave\_attention\_time}     & 3.128          & 1.195                        & 1.171           & 11.430          \\
-		\texttt{total\_clients\_attended} & 21.294         & 10.290                       & 3.000           & 60.000          \\
-		\texttt{libraries\_count}         & 2.990          & 2.025                        & 1.000           & 8.000           \\
-		\hline
-	\end{tabular}
-	\caption{Estadísticas descriptivas de las métricas clave de la simulación}
-	\label{tab:descriptive_stats}
-\end{table*}
 
 
 \end{document}

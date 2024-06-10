@@ -39,11 +39,10 @@ class LibrarySimulator:
             env.process(self.customer_service(env, server, last_service_time))
             env.process(self.check_wait_time(env, arrival_time, server))
             self.queue_lengths.append(len(server.queue))
-            self.total_customers_served += 1
 
     def customer_service(self, env, server, last_service_time):
         """Customer service process"""
-        if self.scheduling_policy == 'SJF':
+        if self.scheduling_policy:
             # Prioritize Fast customers first, then Normal, then Slow
             self.customers_in_queue.sort(key=lambda x: (x[1] != 'Fast', x[1] != 'Normal', x[0]))  # Sort by type and then by arrival time
 
@@ -52,15 +51,16 @@ class LibrarySimulator:
 
             if self.customers_in_queue:
                 arrival_time, customer_type = self.customers_in_queue.pop(0)
+                self.total_customers_served += 1
                 wait_time = env.now - arrival_time
                 self.wait_times.append(wait_time)
-
+                
                 if customer_type == 'Slow':
-                    service_time = np.random.exponential(self.mean_service_time)+60
+                    service_time = np.random.exponential(self.mean_service_time)+6
                 elif customer_type == 'Fast':
                     service_time = np.random.exponential(self.mean_service_time)
                 else:
-                    service_time = np.random.exponential(self.mean_service_time)+30
+                    service_time = np.random.exponential(self.mean_service_time)+3
 
                 yield env.timeout(service_time)
                 last_service_time[0] = env.now
@@ -120,7 +120,7 @@ class LibrarySimulator:
 
 def run_simulations():
     scheduling_policies = [False, True]
-    num_librarians_options = [1, 2, 3]
+    num_librarians_options = [1, 2, 3, 4, 5]
 
     # Abrir el archivo CSV una sola vez para escribir todos los datos
     filename = 'all_simulations_statistics.csv'
@@ -133,9 +133,9 @@ def run_simulations():
         # for policy in scheduling_policies:
         #     for num_librarians in num_librarians_options:
                 # Vary parameters slightly for each simulation
-        mean_arrival_rate = 10
-        mean_service_time = 2
-        max_wait_time = 8 + np.random.uniform(-2, 2)
+        mean_arrival_rate = 15
+        mean_service_time = 3
+        max_wait_time = 6 + np.random.uniform(-2, 2)
 
         all_customers_arrived = []
 
