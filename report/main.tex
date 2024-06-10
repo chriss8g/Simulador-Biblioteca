@@ -67,7 +67,7 @@ El manejo eficiente de las colas en las bibliotecas es crucial para garantizar u
 En este análisis, efectuamos simulaciones del funcionamiento de la biblioteca y nos enfocamos en examinar estadísticamente los resultados de las simulaciones.
 
 \subsection{Objetivos y metas}
-Nuestra investigación busca comprender cómo diferentes políticas de atención, como la política Shortest Job First (SJF), afectan el rendimiento de la biblioteca en términos de tiempo de espera, tamaño de la cola, número de usuarios atendidos y que se retiran de la biblioteca sin ser atendidos. Mediante el análisis estadístico de los datos recogidos durante la simulación, buscamos identificar patrones y tendencias que puedan guiar la implementación de estrategias más efectivas para minimizar los tiempos de espera y maximizar la satisfacción de los clientes.
+Nuestra investigación busca comprender cómo diferentes políticas de atención, como la política Shortest Job First (SJF), afectan el rendimiento de la biblioteca en términos de tiempo de espera, tamaño de la cola, número de clientes atendidos y número de clientes que se retiran de la biblioteca sin ser atendidos. Mediante el análisis estadístico de los datos recogidos durante la simulación, buscamos identificar patrones y tendencias que puedan conducir a la implementación de estrategias más efectivas para minimizar los tiempos de espera y maximizar la satisfacción de los clientes.
 
 \subsection{El sistema específico a simular y las variables de interés}
 El sistema a simular será el funcionamiento de la biblioteca en un período de tiempo(8 horas). De los resultados de las simulaciones, además de su relación con las variables del problema nos interesan los siguientes datos:
@@ -84,9 +84,9 @@ El problema es descrito por las siguientes variables:
 	\item Distribución de llegada de los clientes
 	\item Distribución del tiempo que tardan en atender los bibliotecarios
 	\item Tiempo promedio de espera y atención
-	\item Número de bibliotecas involucradas en la simulación
-	\item Indicador de si se usó la política SJF(en caso contrario se usa FIFO)
-	\item Tiempo que esperan los clientes en la cola antes de retirarse
+	\item Número de bibliotecarios involucrados en la simulación
+	\item Indicador del uso de la política SJF(en caso contrario se usa FIFO)
+	\item Tiempo de espera de los clientes en la cola antes de retirarse
 \end{itemize}
 
 
@@ -133,7 +133,7 @@ A lo largo de la simulación monitoreamos varias métricas clave como son: polí
 \subsection{Hipótesis extraídas de los resultados}
 \begin{itemize}
 	\item Como puede observarse en la Figura \ref{fig:boxplot} parece haber cierta relación entre la aplicación de la política SJF y la mejora la media de tiempo de espera de los clientes como se sugiere en \cite{modern_operating_systems}
-	\item Aparentemente el añadir un quinto bibliotecario no afecta en sentido general a las métricas analizadas.
+	\item Aparentemente el añadir un quinto bibliotecario no afecta en sentido general las métricas analizadas.
 \end{itemize}
 
 \subsection{Experimentos realizados para validar las hipótesis}
@@ -148,12 +148,12 @@ Para la primera hipótesis se realizó un análisis de la correlación (ver \ref
 
  Como puede observarse la aplicación de esta política no tiene correlaciones significativas con ninguna de las variables de salida. \\
 Además para comprobar específicamente la relación entre las variables SJF y Mean Wait Time se utilizó una prueba  Mann-Whitney U la cual es una alternativa a la prueba t de Student cuando no se cumplen los supuestos de normalidad. La misma arrojó los resultados siguientes:\\
-Mann-Whitney U Test Result: MannwhitneyuResult(statistic=1099.0, pvalue=0.2355292425042248) \\
-El valor p es 0.8624, que es mayor que 0.05. Esto indica que no hay suficiente evidencia para rechazar la hipótesis nula. En otras palabras, no hay una diferencia significativa en el tiempo medio de espera (Mean Wait Time) entre las políticas de SJF y FIFO.\\
+Mann-Whitney U Test Result: MannwhitneyuResult(statistic=1099.0, pvalue=0.236) \\
+El valor p es 0.236, que es mayor que 0.05. Esto indica que no hay suficiente evidencia para rechazar la hipótesis nula. En otras palabras, no hay una diferencia significativa en el tiempo medio de espera (Mean Wait Time) entre las políticas de SJF y FIFO.\\
 \\
 La Figura \ref{fig:boxplot} indica que al añadir un quinto bibliotecario los datos tienen un comportamiento similar al que tenian con 4. Esto significa que solo representaría un costo adicional a la biblioteca y objetivamente no es necesario. Para validar esta hipótesis se realizó una prueba t de Student (ya que se pudo verificar que se cumplían los supuestos de la misma) para comprobar si existe una diferencia significativa en la cantidad de clientes atendidos en las configuraciones de 4 y 5 bibliotecarios\\
 Los resultados fueron:\\
-T-test Result: TtestResult(statistic=0.3313119241965054, pvalue=0.7419468746160538, df=45.0)\\
+T-test Result: (statistic=0.331, pvalue=0.742, df=45.0)\\
 \\
 El pvalue es mayor que 0.05 por lo cual podemos concluir que no existe diferencia significativa en la cantidad de clientes atendidos en los grupos de datos de 4 y 5 bibliotecarios, lo cual sugiere que la adición de un quinto bibliotecario no mejora significativamente el servicio en la biblioteca y por lo tanto no es necesario.
 
@@ -202,7 +202,7 @@ El modelo $M/M/4$,se basa en los siguientes supuestos y restricciones:
 	\item \textbf{Capacidad de la Cola}: Se asume que la cola tiene capacidad infinita, es decir, no hay límite en el número de clientes que pueden esperar en la cola.
 	\item \textbf{Disciplina de la Cola}: Los clientes son atendidos en el orden de llegada (FIFO - First In, First Out).
 	\item \textbf{Independencia}: Se asume que los tiempos de llegada y servicio son independientes entre sí y no varían con el tiempo.
-	\item \textbf{Servidores Idénticos}: Los dos servidores son idénticos en términos de capacidad y eficiencia, es decir, ambos tienen la misma tasa de servicio $\mu$.
+	\item \textbf{Servidores Idénticos}: Los cuatro servidores son idénticos en términos de capacidad y eficiencia, es decir, ambos tienen la misma tasa de servicio $\mu$.
 \end{enumerate}
 
 \subsection{Comparación de los resultados obtenidos}
